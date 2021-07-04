@@ -4,6 +4,7 @@ import clsx from 'clsx';
 export const ArrowButton = props => {
 
   const pText = props.text;
+  const pLeft = props.left;
 
   return (
     <div className={ clsx(
@@ -12,7 +13,8 @@ export const ArrowButton = props => {
       'cursor-pointer',
 
       'flex',
-      'flex-row'
+      pLeft ? 'flex-row' : 'flex-row-reverse',
+      pLeft ? 'justify-start' : 'justify-end'
       ) }
     >
       {/*https://tailwindcss.com/docs/fill*/}
@@ -21,7 +23,7 @@ export const ArrowButton = props => {
         className={ clsx(
           'h-6 w-6',
           /*https://tailwindcss.com/docs/fill*/
-          'text-beige currentColor',
+          'stroke-current text-crimson',
 
           'transition-bg ease-bop duration-300',
           'transform',

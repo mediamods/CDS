@@ -37,7 +37,10 @@ const Page = props => {
           crimson={ false } />
         <ArrowButton
           text={ 'Arrow Button Wiggler'}
-          crimson={ false } />
+          left={ true } />
+        <ArrowButton
+          text={ 'Arrow Wrigger Right' }
+          left={ false } />
       </div>
     </div>
   );
