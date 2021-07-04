@@ -5,10 +5,15 @@ import {
 
 import clsx from 'clsx';
 
+import { 
+  XIcon,
+  MenuIcon,
+  SearchIcon
+} from '@heroicons/react/outline';
+
+export const ICON_CLOSE = 'ICON_CLOSE';
 export const ICON_MENU = 'ICON_MENU';
 export const ICON_SEARCH = 'ICON_SEARCH';
-export const ICON_CLOSE = 'ICON_CLOSE';
-
 
 export const IconButton = props => {
 
@@ -29,17 +34,11 @@ export const IconButton = props => {
 
     const icons = {
       [ICON_MENU]:
-      <svg xmlns="http://www.w3.org/2000/svg" className={ className } fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-      </svg>,
+      <MenuIcon className={ className } />,
       [ICON_SEARCH]:
-      <svg xmlns="http://www.w3.org/2000/svg" className={ className } fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-      </svg>,
+      <SearchIcon className={ className } />,
       [ICON_CLOSE]:
-      <svg xmlns="http://www.w3.org/2000/svg" className={ className } fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-      </svg>
+      <XIcon className={ className } />,
     };
     const icon = icons[pIcon];
     return icon;
