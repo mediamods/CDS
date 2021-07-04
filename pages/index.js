@@ -5,6 +5,10 @@ import {
 } from './api/ArrowButton';
 
 import {
+  IconButton
+} from './api/IconButton';
+
+import {
   PillButton
 } from './api/PillButton';
 
@@ -24,7 +28,7 @@ const Page = props => {
         {/*https://stackoverflow.com/questions/56213019/how-to-add-a-favicon-to-a-next-js-static-site*/}
         <link rel="shortcut icon" href="favicon.png" />
       </Head>
-      <div style={{display: 'flex', flexDirection: 'column', gap: '10px'}}>      
+      <div style={{display: 'flex', flexDirection: 'column', gap: '10px', backgroundColor: 'gray'}}>      
         <RoundButton
           text={ 'cool buttons' } />
         <RoundButton
@@ -41,6 +45,12 @@ const Page = props => {
         <ArrowButton
           text={ 'Arrow Wrigger Right' }
           left={ false } />
+        <IconButton
+          dark={ true }
+          icon={ 'ICON_MENU' } />
+        <IconButton
+          dark={ false }
+          icon={ 'ICON_SEARCH' } />
       </div>
     </div>
   );
