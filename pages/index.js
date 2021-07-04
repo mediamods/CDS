@@ -51,6 +51,9 @@ const Page = props => {
         <IconButton
           dark={ false }
           icon={ 'ICON_SEARCH' } />
+        <IconButton
+          dark={ false }
+          icon={ 'ICON_CLOSE' } />
       </div>
     </div>
   );
