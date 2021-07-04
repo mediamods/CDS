@@ -17,17 +17,16 @@ import {
 } from './api/RoundButton';
 
 
-//for duplicating transition behavior:
-//https://tailwindcss.com/docs/transition-property
-
 const Page = props => {
 
   return (
     <div>
+
       <Head>
         {/*https://stackoverflow.com/questions/56213019/how-to-add-a-favicon-to-a-next-js-static-site*/}
         <link rel="shortcut icon" href="favicon.png" />
       </Head>
+
       <div style={{display: 'flex', flexDirection: 'column', gap: '10px', backgroundColor: 'gray'}}>      
         <RoundButton
           text={ 'cool buttons' } />
@@ -35,10 +34,13 @@ const Page = props => {
           text={ 'wow now cow' } />
         <PillButton
           text={ 'Explore Summer at Harvard'}
-          crimson={ true } />
+          theme={ 'crimson' } />
         <PillButton
           text={ 'Explore Winter at Yale'}
-          crimson={ false } />
+          theme={ 'crimson-light' } />
+        <PillButton
+          text={ 'Request Info'}
+          theme={ 'dark' } />
         <ArrowButton
           text={ 'Arrow Button Wiggler'}
           left={ true } />
@@ -46,15 +48,16 @@ const Page = props => {
           text={ 'Arrow Wrigger Right' }
           left={ false } />
         <IconButton
-          dark={ true }
+          theme={ 'dark' }
           icon={ 'ICON_MENU' } />
         <IconButton
-          dark={ false }
+          theme={ 'light' }
           icon={ 'ICON_SEARCH' } />
         <IconButton
-          dark={ false }
+          theme={ 'light' }
           icon={ 'ICON_CLOSE' } />
       </div>
+
     </div>
   );
 };

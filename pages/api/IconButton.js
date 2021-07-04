@@ -13,7 +13,8 @@ export const ICON_CLOSE = 'ICON_CLOSE';
 export const IconButton = props => {
 
   const pIcon = props.icon;
-  const pDark = props.dark;
+  const pTheme = props.theme;
+  const darkTheme = pTheme === 'dark';
 
   const memodIcon = useMemo( () => {
     const className = clsx( 
@@ -22,8 +23,8 @@ export const IconButton = props => {
 
       'transition-text ease-bop duration-300',
       'stroke-current',
-      pDark ? 'text-white' : 'text-black',
-      `group-hover:${ pDark ? 'text-black' : 'text-white' }`
+      darkTheme ? 'text-white' : 'text-black',
+      `group-hover:${ darkTheme ? 'text-black' : 'text-white' }`
     );
 
     const icons = {
@@ -44,7 +45,7 @@ export const IconButton = props => {
     return icon;
   }, [
     pIcon,
-    pDark
+    darkTheme
   ] );
 
   return (
@@ -53,8 +54,8 @@ export const IconButton = props => {
       'w-8',
 
       'transition-bg ease-bop duration-300',
-      pDark ? 'bg-black' : 'bg-white',
-      pDark ? 'hover:bg-white' : 'hover:bg-black',
+      darkTheme ? 'bg-black' : 'bg-white',
+      darkTheme ? 'hover:bg-white' : 'hover:bg-black',
 
       'rounded-full',
       'flex',

@@ -1,51 +1,74 @@
 
+import {
+  useMemo
+} from 'react';
+
 import clsx from 'clsx';
 
 export const PillButton = props => {
 
   const pText = props.text;
-  const pCrimson = props.crimson;
+  const pTheme = props.theme;
 
-  const classList = [
-    'transition-bg ease-bop duration-300',
+  const memodClassList = useMemo( () => {
+    const classList = [
+      'transition-bg ease-bop duration-300',
 
-    'border',
-    'border-beige',
+      'rounded-full',
+      'py-3',
+      'px-6',
 
-    'rounded-full',
-    'py-3',
-    'px-6',
+        //https://stackoverflow.com/a/40141200/62255
+      'self-start',
 
-      //https://stackoverflow.com/a/40141200/62255
-    'self-start',
+      'whitespace-nowrap',
+      'cursor-pointer'
+    ];
 
-    'whitespace-nowrap',
-    'cursor-pointer'
-  ];
+    const themeColors = {
+      'crimson': [
+        'border',
+        'border-beige',
 
-  if (pCrimson) {
-    classList.push(
-      'bg-crimson',
-      'hover:bg-black',
-      'text-white',
-      'hover:text-white',
+        'bg-crimson',
+        'hover:bg-black',
+        'text-white',
+        'hover:text-white',
 
-      'active:bg-crimson'
-    );
-  }
-  else {
-    classList.push(
-      'bg-white',
-      'hover:bg-black',
-      'text-black',
-      'hover:text-white',
+        'active:bg-crimson'
+      ],
+      'crimson-light': [
+        'border',
+        'border-beige',
 
-      'active:bg-crimson'
-    );
-  }
+        'bg-white',
+        'hover:bg-black',
+        'text-black',
+        'hover:text-white',
+
+        'active:bg-crimson'
+      ],
+      'dark': [
+        'bg-black',
+        'hover:bg-white',
+        'text-white',
+        'hover:text-black',
+
+        'active:bg-black',
+        'active:text-white'
+      ]
+    };
+
+    classList.push( themeColors[pTheme] );
+
+    return classList;
+  }, [
+    pTheme
+  ] );
+
 
   return (
-    <a className={ clsx( classList ) }>
+    <a className={ clsx( memodClassList ) }>
       { pText }
     </a>
   );
