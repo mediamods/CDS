@@ -9,6 +9,10 @@ import {
 } from './api/IconButton';
 
 import {
+  HMenu
+} from './api/Menu';
+
+import {
   PillButton
 } from './api/PillButton';
 
@@ -56,6 +60,8 @@ const Page = props => {
         <IconButton
           theme={ 'light' }
           icon={ 'ICON_CLOSE' } />
+{/*        <HMenu
+          text={ 'wow a menu'} />*/}
       </div>
 
     </div>
