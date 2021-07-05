@@ -60,8 +60,8 @@ const Page = props => {
         <IconButton
           theme={ 'light' }
           icon={ 'ICON_CLOSE' } />
-{/*        <HMenu
-          text={ 'wow a menu'} />*/}
+        <HMenu
+          text={ 'wow a menu'} />
       </div>
 
     </div>
