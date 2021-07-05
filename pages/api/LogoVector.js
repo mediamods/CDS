@@ -1,10 +1,17 @@
 
+
+
 export const LogoVector = props => {
+
+  const pWidth = props.width;
+  // const pHeight = props.height;
+
   return(
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="135"
-    height="159"
+    width={ pWidth }
+    // width="135"
+    // height="159"
     viewBox="0 0 135 159"
     fill="none"
     role="none">

@@ -1,11 +1,12 @@
 
 export const TitleVector = props => {
 
+  const pWidth = props.width;
+
   return(
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="542"
-      height="106"
+      width={ pWidth }
       viewBox="0 0 542 106"
       fill="none"
       role="none">

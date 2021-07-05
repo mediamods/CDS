@@ -17,12 +17,16 @@ import {
 } from './api/HoverMenu';
 
 import {
-  LogoVector
-} from './api/LogoVector';
+  Logo
+} from './api/Logo';
 
-import {
-  TitleVector
-} from './api/TitleVector';
+// import {
+//   LogoVector
+// } from './api/LogoVector';
+
+// import {
+//   TitleVector
+// } from './api/TitleVector';
 
 import {
   PillButton
@@ -40,12 +44,25 @@ const Page = props => {
 
       <Head>
         {/*https://stackoverflow.com/questions/56213019/how-to-add-a-favicon-to-a-next-js-static-site*/}
-        <link rel="shortcut icon" href="favicon.png" />
+        <link
+          rel="shortcut icon"
+          href="favicon.png" />
       </Head>
 
-      <div style={{display: 'flex', flexDirection: 'column', gap: '10px', backgroundColor: '#f5f4f1'}}>
+      <div style={
+        {
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '10px',
+          backgroundColor: '#f5f4f1'
+        } }>
+
+        <Logo/>
+
+{/*
         <LogoVector/>
         <TitleVector/>
+*/}
         <RoundButton
           text={ 'cool buttons' } />
         <RoundButton
