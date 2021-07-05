@@ -11,21 +11,24 @@ import {
 } from 'react';
 
 export const HMenu = props => {
+
+  const pText = props.text;
+
   return (
     <Menu as="div" className="w-56">
 
       <Menu.Button>
-        Options
+        { pText }
       </Menu.Button>
 
       <Transition
         as={ Fragment }
         enter="transition ease-out duration-100"
-        enterFrom="transform opacity-0 scale-95"
-        enterTo="transform opacity-100 scale-100"
+        enterFrom="transform opacity-0"
+        enterTo="transform opacity-100"
         leave="transition ease-in duration-75"
-        leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-95"
+        leaveFrom="transform opacity-100"
+        leaveTo="transform opacity-0"
       >
         <Menu.Items className="absolute">
           <Menu.Item>

@@ -61,7 +61,7 @@ const Page = props => {
           theme={ 'light' }
           icon={ 'ICON_CLOSE' } />
         <HMenu
-          text={ 'wow a menu'} />
+          text={ 'Adult & College Students'} />
       </div>
 
     </div>
