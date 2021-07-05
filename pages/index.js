@@ -17,8 +17,12 @@ import {
 } from './api/HoverMenu';
 
 import {
-  Logo
-} from './api/Logo';
+  LogoVector
+} from './api/LogoVector';
+
+import {
+  TitleVector
+} from './api/TitleVector';
 
 import {
   PillButton
@@ -40,7 +44,8 @@ const Page = props => {
       </Head>
 
       <div style={{display: 'flex', flexDirection: 'column', gap: '10px', backgroundColor: '#f5f4f1'}}>
-        <Logo/> 
+        <LogoVector/>
+        <TitleVector/>
         <RoundButton
           text={ 'cool buttons' } />
         <RoundButton
