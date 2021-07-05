@@ -36,15 +36,17 @@ export const HoverMenu = props => {
         leaveTo="transform opacity-0"
       >
 
-        <Menu.Items className="absolute">
+        <Menu.Items className="absolute bg-white w-56 flex-column justify-center">
           {
           pItems.map( item => {
             return (
-              <Menu.Item>
+              <Menu.Item className="justify-center">
                 {({ active }) => (
                   <ArrowButton
                     text={ item.text }
+                    visible={ false }
                     left={ false }
+                    justify={ 'justify-between' }
                   />
                 )}
               </Menu.Item>

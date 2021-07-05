@@ -1,4 +1,5 @@
 
+
 import clsx from 'clsx';
 
 import { 
@@ -9,6 +10,9 @@ export const ArrowButton = props => {
 
   const pText = props.text;
   const pLeft = props.left;
+  const pJustify = props.justify;
+
+  const pVisible = props.visible;
 
   return (
     <a
@@ -19,7 +23,7 @@ export const ArrowButton = props => {
 
         'flex',
         pLeft ? 'flex-row' : 'flex-row-reverse',
-        pLeft ? 'justify-start' : 'justify-end'
+        pJustify
       ) }
     >
       <ArrowSmRightIcon
@@ -28,9 +32,12 @@ export const ArrowButton = props => {
           'w-6',
           'stroke-current text-crimson',
 
-          'transition-bg ease-bop duration-300',
+          'transition ease-bop duration-300',
           'transform',
-          'group-hover:translate-x-1'
+          'group-hover:translate-x-1',
+          
+          pVisible ? '' : 'opacity-0',
+          pVisible ? '' : 'group-hover:opacity-100'
         ) }
       />
 

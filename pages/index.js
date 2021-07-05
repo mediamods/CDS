@@ -51,10 +51,14 @@ const Page = props => {
           theme={ 'dark' } />
         <ArrowButton
           text={ 'Arrow Button Wiggler'}
-          left={ true } />
+          visible={ true }
+          left={ true }
+          justify={ 'justify-start'} />
         <ArrowButton
           text={ 'Arrow Wrigger Right' }
-          left={ false } />
+          visible={ true }
+          left={ false }
+          justify={ 'justify-end' } />
         <IconButton
           theme={ 'dark' }
           icon={ 'ICON_MENU' } />
