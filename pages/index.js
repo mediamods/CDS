@@ -5,12 +5,16 @@ import {
 } from './api/ArrowButton';
 
 import {
+  Catalog
+} from './api/Catalog';
+
+import {
   IconButton
 } from './api/IconButton';
 
 import {
-  HMenu
-} from './api/Menu';
+  HoverMenu
+} from './api/HoverMenu';
 
 import {
   PillButton
@@ -60,8 +64,47 @@ const Page = props => {
         <IconButton
           theme={ 'light' }
           icon={ 'ICON_CLOSE' } />
-        <HMenu
-          text={ 'Adult & College Students'} />
+        <HoverMenu
+          text={ 'Adult & College Students'}
+          items={ [
+            {
+              text: 'Browse Courses',
+              link: '/'
+            },
+            {
+              text: 'Course Registration',
+              link: '/'
+            }
+          ] }/>
+        <Catalog
+          items={ [
+            {
+              heading: 'Arts, Writing, and the Humanities',
+              list: [
+                {
+                  text: 'Comparitive Literature',
+                  link: '/'
+                },
+                {
+                  text: 'Creative Writing',
+                  link: '/'
+                }
+              ]
+            },
+            {
+              heading: 'Business & Economics',
+              list: [
+                {
+                  text: 'Management',
+                  link: '/'
+                },
+                {
+                  text: 'Economics',
+                  link: '/'
+                }
+              ]
+            }
+          ] }/>
       </div>
 
     </div>
