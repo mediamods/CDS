@@ -10,6 +10,8 @@ import {
   useState
 } from 'react';
 
+import clsx from 'clsx';
+
 import {
   ArrowButton
 } from './ArrowButton';
@@ -39,15 +41,29 @@ export const HoverMenu = props => {
       >
 
         <Menu.Items
-          static
-          className="absolute bg-white w-56 flex-column justify-center">
-
-          {/*todo -- add crimson dot here*/}
+          className="absolute bg-white w-56">
+          <div className={ clsx(
+              'transform',
+              'translate-x-1/2'
+            ) } >
+              <div className={ clsx(
+                'absolute',
+                'transform',
+                '-translate-x-1/2',
+                '-translate-y-1/2',
+                'w-2',
+                'h-2',
+                'rounded-full',
+                'bg-crimson'
+              ) }/>
+            </div>
 
           {
           pItems.map( item => {
             return (
-              <Menu.Item className="justify-center">
+              <Menu.Item
+                key={ item.text }
+                className="justify-center">
                 {({ active }) => (
                   <ArrowButton
                     text={ item.text }
