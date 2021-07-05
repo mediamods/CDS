@@ -11,28 +11,33 @@ export const Catalog = props => {
   const pItems = props.items;
 
   return (
-    <div/>
-      // pItems.map( item => {
-      //   return (
-      //     <Disclosure>
-      //       <Disclosure.Button>
-      //         { item.heading }
-      //       </Disclosure.Button>
-      //       <Disclosure.Panel>
-      //         <ul>
-      //         {
-      //           item.items.map( listItem => {
-      //             return (
-      //               <li>
-      //                 { listItem.text }
-      //               </li>
-      //             )
-      //           })
-      //         }
-      //         </ul>
-      //       </Disclosure.Panel>
-      //     </Disclosure>
-      //   );
-      // } )
+    pItems.map( item => {
+      return (
+        <Disclosure
+          key={ item.heading }
+        >
+          <Disclosure.Button
+            className={
+              'flex'
+            }
+          >
+            { item.heading }
+          </Disclosure.Button>
+          <Disclosure.Panel>
+            <ul>
+{/*            {
+              item.items.map( listItem => {
+                return (
+                  <li>
+                    { listItem.text }
+                  </li>
+                )
+              })
+            }*/}
+            </ul>
+          </Disclosure.Panel>
+        </Disclosure>
+      );
+    } )
   );
 };

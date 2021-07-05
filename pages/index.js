@@ -17,6 +17,10 @@ import {
 } from './api/HoverMenu';
 
 import {
+  Logo
+} from './api/Logo';
+
+import {
   PillButton
 } from './api/PillButton';
 
@@ -35,7 +39,8 @@ const Page = props => {
         <link rel="shortcut icon" href="favicon.png" />
       </Head>
 
-      <div style={{display: 'flex', flexDirection: 'column', gap: '10px', backgroundColor: 'gray'}}>      
+      <div style={{display: 'flex', flexDirection: 'column', gap: '10px', backgroundColor: '#f5f4f1'}}>
+        <Logo/> 
         <RoundButton
           text={ 'cool buttons' } />
         <RoundButton
@@ -113,6 +118,7 @@ const Page = props => {
 
     </div>
   );
+
 };
 
 export default Page;
