@@ -22,6 +22,8 @@ export const HoverMenu = props => {
   return (
     <Menu as="div" className="w-56">
 
+      <Fragment>
+
       <Menu.Button>
         { pText }
       </Menu.Button>
@@ -36,7 +38,12 @@ export const HoverMenu = props => {
         leaveTo="transform opacity-0"
       >
 
-        <Menu.Items className="absolute bg-white w-56 flex-column justify-center">
+        <Menu.Items
+          static
+          className="absolute bg-white w-56 flex-column justify-center">
+
+          {/*todo -- add crimson dot here*/}
+
           {
           pItems.map( item => {
             return (
@@ -56,6 +63,8 @@ export const HoverMenu = props => {
         </Menu.Items>
 
       </Transition>
+
+      </Fragment>
     </Menu>
   )
 }

@@ -1,4 +1,8 @@
-import { 
+import {
+  Fragment
+} from 'react';
+
+import {
   Disclosure
 } from '@headlessui/react'
 
@@ -7,14 +11,27 @@ export const Catalog = props => {
   const pItems = props.items;
 
   return (
-    <Disclosure>
-      <Disclosure.Button className="py-2">
-        Is team pricing available?
-      </Disclosure.Button>
-      <Disclosure.Panel className="text-gray-500">
-        Yes! You can purchase a license that you can share with your entire
-        team.
-      </Disclosure.Panel>
-    </Disclosure>
+      pItems.map( item => {
+        return (
+          <Disclosure>
+            <Disclosure.Button>
+              { item.heading }
+            </Disclosure.Button>
+            <Disclosure.Panel>
+              <ul>
+              {
+                item.items.map( listItem => {
+                  return (
+                    <li>
+                      { listItem.text }
+                    </li>
+                  )
+                })
+              }
+              </ul>
+            </Disclosure.Panel>
+          </Disclosure>
+        );
+      } )
   );
 };

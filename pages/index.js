@@ -84,7 +84,7 @@ const Page = props => {
           items={ [
             {
               heading: 'Arts, Writing, and the Humanities',
-              list: [
+              items: [
                 {
                   text: 'Comparitive Literature',
                   link: '/'
@@ -97,7 +97,7 @@ const Page = props => {
             },
             {
               heading: 'Business & Economics',
-              list: [
+              items: [
                 {
                   text: 'Management',
                   link: '/'
