@@ -16,7 +16,7 @@ import {
   ArrowButton
 } from './ArrowButton';
 
-export const HoverMenu = props => {
+export const NavItem = props => {
 
   const pText = props.text;
   const pItems = props.items;
@@ -60,24 +60,32 @@ export const HoverMenu = props => {
               ) }/>
             </div>
 
-          {
-          pItems.map( item => {
-            return (
-              <Menu.Item
-                key={ item.text }
-                className="justify-center">
-                {({ active }) => (
-                  <ArrowButton
-                    text={ item.text }
-                    visible={ false }
-                    left={ false }
-                    justify={ 'justify-between' }
-                  />
-                )}
-              </Menu.Item>
-            );
-          } )
-          }
+          <div className={
+            clsx(
+              'p-6'
+            ) } >
+
+            {
+            pItems.map( item => {
+              return (
+                <Menu.Item
+                  key={ item.text }>
+                  {({ active }) => (
+                    <div className={ 'py-1' }>
+                    <ArrowButton
+                      text={ item.text }
+                      visible={ false }
+                      left={ false }
+                      justify={ 'justify-between' }
+                    />
+                    </div>
+                  )}
+                </Menu.Item>
+              );
+            } )
+            }
+
+          </div>
         </Menu.Items>
 
       </Transition>

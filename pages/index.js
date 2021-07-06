@@ -1,3 +1,7 @@
+import {
+  Fragment
+} from 'react';
+
 import Head from 'next/head';
 
 import {
@@ -9,16 +13,16 @@ import {
 } from './api/Catalog';
 
 import {
-  HoverMenu
-} from './api/HoverMenu';
-
-import {
   IconButton
 } from './api/IconButton';
 
 import {
   Logo
 } from './api/Logo';
+
+import {
+  NavItem
+} from './api/NavItem';
 
 import {
   PillButton
@@ -31,7 +35,7 @@ import {
 const Page = props => {
 
   return (
-    <div>
+    <Fragment>
 
       <Head>
         {/*https://stackoverflow.com/questions/56213019/how-to-add-a-favicon-to-a-next-js-static-site*/}
@@ -41,7 +45,7 @@ const Page = props => {
       </Head>
 
       <div 
-        className={ 'flex flex-col gap-1 bg-white' } >
+        className={ 'flex flex-col gap-1' } >
 
         <div
           className={ 'w-screen flex' } >
@@ -49,7 +53,7 @@ const Page = props => {
           <div
             className={ 'w-full flex gap-10 px-10' } >
 
-            <HoverMenu
+            <NavItem
               text={ 'Adult & College Students'}
               items={ [
                 {
@@ -62,7 +66,7 @@ const Page = props => {
                 }
               ] }/>
 
-            <HoverMenu
+            <NavItem
               text={ 'Adult & College Students'}
               items={ [
                 {
@@ -74,8 +78,6 @@ const Page = props => {
                   link: '/'
                 }
               ] }/>
-
-
 
           </div>
         </div>
@@ -144,7 +146,7 @@ const Page = props => {
           ] }/>
       </div>
 
-    </div>
+    </Fragment>
   );
 
 };

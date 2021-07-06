@@ -14,7 +14,7 @@ export const Logo = props => {
     <div className={ clsx(
       'flex',
       'items-start',
-      'w-56',
+      'w-96',
       'gap-x-3.5'
     ) } >
   
