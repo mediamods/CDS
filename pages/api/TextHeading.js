@@ -7,7 +7,7 @@ export const TextHeading = props => {
 
   return (
     <div
-      className={ 'w-1/2 text-5xl'} >
+      className={ 'w-2/3 text-5xl'} >
       <span 
         className={ 'font-bold' }>
           { pMain }

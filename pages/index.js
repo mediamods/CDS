@@ -17,6 +17,10 @@ import {
 } from './api/IconButton';
 
 import {
+  InfoCard
+} from './api/InfoCard';
+
+import {
   Logo
 } from './api/Logo';
 
@@ -56,7 +60,7 @@ const Page = props => {
         className={ 'flex flex-col gap-5' } >
 
         <div
-          className={ 'w-screen flex' } >
+          className={ 'w-full flex' } >
           <Logo/>
           <div
             className={ 'w-full flex px-10' } >
@@ -118,6 +122,10 @@ const Page = props => {
           text={ 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' }
         />
 
+        <TextParagraph
+          text={ 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' }
+        />
+
 
         <RoundButton
           text={ 'Learn More' } />
@@ -130,25 +138,26 @@ const Page = props => {
         <PillButton
           text={ 'Request Info'}
           theme={ 'dark' } />
-        <ArrowButton
-          text={ 'Arrow Button Wiggler'}
-          visible={ true }
-          left={ true }
-          justify={ 'justify-start'} />
-        <ArrowButton
-          text={ 'Arrow Wrigger Right' }
-          visible={ true }
-          left={ false }
-          justify={ 'justify-end' } />
 
-        <IconButton
-          theme={ 'light' }
-          icon={ 'ICON_SEARCH' } />
-        <IconButton
-          theme={ 'light' }
-          icon={ 'ICON_CLOSE' } />
 
-        <Catalog
+        <div
+          className={ 'flex gap-10' }
+        >
+          <InfoCard 
+            title={ 'Harvard Extension School' }
+            text={ 'Harvard degrees, certificates and courses - online, in the evenings, and at your own pace.' }
+          />
+          <InfoCard 
+            title={ 'Harvard Summer School' }
+            text={ 'Harvard degrees, certificates and courses - online, in the evenings, and at your own pace.' }
+          />
+          <InfoCard 
+            title={ 'Harvard Extension School' }
+            text={ 'Harvard degrees, certificates and courses - online, in the evenings, and at your own pace.' }
+          />
+        </div>
+
+{/*        <Catalog
           items={ [
             {
               heading: 'Arts, Writing, and the Humanities',
@@ -176,7 +185,7 @@ const Page = props => {
                 }
               ]
             }
-          ] }/>
+          ] }/>*/}
       </div>
 
     </Fragment>

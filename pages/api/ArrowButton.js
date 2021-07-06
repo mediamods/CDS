@@ -24,7 +24,9 @@ export const ArrowButton = props => {
 
         'flex',
         pLeft ? 'flex-row' : 'flex-row-reverse',
-        pJustify
+        pJustify,
+
+        'font-bold'
       ) }
     >
       <ArrowSmRightIcon
