@@ -31,7 +31,7 @@ export const NavItem = props => {
       </Popover.Button>
 
       <Transition
-        enter="transition ease-out duration-200"
+        enter="transition ease-out duration-100"
         enterFrom="transform opacity-0"
         enterTo="transform opacity-100"
         leave="transition ease-in duration-75"

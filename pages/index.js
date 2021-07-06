@@ -32,6 +32,14 @@ import {
   RoundButton
 } from './api/RoundButton';
 
+import {
+  TextHeading
+} from './api/TextHeading';
+
+import {
+  TextParagraph
+} from './api/TextParagraph';
+
 const Page = props => {
 
   return (
@@ -45,7 +53,7 @@ const Page = props => {
       </Head>
 
       <div 
-        className={ 'flex flex-col gap-1' } >
+        className={ 'flex flex-col gap-5' } >
 
         <div
           className={ 'w-screen flex' } >
@@ -102,15 +110,22 @@ const Page = props => {
           </div>
         </div>
 
+        <TextHeading
+          mainText={ 'Passion for teaching. Dedication to Growth.' }
+          subText={ 'Accessible, exceptional higher education for leaners like you.' } />
+
+        <TextParagraph
+          text={ 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' }
+        />
+
+
         <RoundButton
-          text={ 'cool buttons' } />
-        <RoundButton
-          text={ 'wow now cow' } />
+          text={ 'Learn More' } />
         <PillButton
           text={ 'Explore Summer at Harvard'}
           theme={ 'crimson' } />
         <PillButton
-          text={ 'Explore Winter at Yale'}
+          text={ 'Explore Winter at Harvard'}
           theme={ 'crimson-light' } />
         <PillButton
           text={ 'Request Info'}
