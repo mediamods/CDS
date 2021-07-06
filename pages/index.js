@@ -21,6 +21,10 @@ import {
 } from './api/InfoCard';
 
 import {
+  InfoGridCell
+} from './api/InfoGrid';
+
+import {
   Logo
 } from './api/Logo';
 
@@ -141,8 +145,7 @@ const Page = props => {
 
 
         <div
-          className={ 'flex gap-10' }
-        >
+          className={ 'flex gap-10' } >
           <InfoCard 
             title={ 'Harvard Extension School' }
             text={ 'Harvard degrees, certificates and courses - online, in the evenings, and at your own pace.' }
@@ -155,6 +158,30 @@ const Page = props => {
             title={ 'Harvard Extension School' }
             text={ 'Harvard degrees, certificates and courses - online, in the evenings, and at your own pace.' }
           />
+        </div>
+
+        <div
+          className={ 'grid grid-cols-2 gap-10 w-fit' } >
+
+          <InfoGridCell
+            title={ '70 degrees & certificates' }
+            text={ 'Harvard Extension School' } />
+          <InfoGridCell 
+            title={ '110 years' }
+            text={ 'Distance Education trailblazers' } />
+          <InfoGridCell
+            title={ '120' }
+            text={ 'Professional Development programs' } />
+          <InfoGridCell
+            title={ '60 countries' }
+            text={ 'Harvard Summer School' } />
+          <InfoGridCell
+            title={ '29,000' }
+            text={ 'Harvard Extension Alumni Association members' } />
+          <InfoGridCell
+            title={ '550 members' }
+            text={ 'Harvard Institute for Learning in Retirement' } />
+
         </div>
 
 {/*        <Catalog
