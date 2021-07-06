@@ -30,16 +30,15 @@ export const NavItem = props => {
         { pText }
       </Popover.Button>
 
-{/*      <Transition
-        as={ Fragment }
-        enter="transition ease-out duration-100"
+      <Transition
+        enter="transition ease-out duration-200"
         enterFrom="transform opacity-0"
         enterTo="transform opacity-100"
         leave="transition ease-in duration-75"
         leaveFrom="transform opacity-100"
         leaveTo="transform opacity-0"
       >
-*/}
+
         <Popover.Panel
           className={ clsx(
             'bg-white',
@@ -66,30 +65,25 @@ export const NavItem = props => {
               'p-6'
             ) } >
 
-{/*            {
+           {
             pItems.map( item => {
               return (
-                <Menu.Item
-                  key={ item.text }>
-                  {({ active }) => (
-                    <div className={ 'py-1' }>
-                      <ArrowButton
-                        text={ item.text }
-                        visible={ false }
-                        left={ false }
-                        justify={ 'justify-between' }
-                        active={ active }
-                      />
-                    </div>
-                  )}
-                </Menu.Item>
+                <div className={ 'py-1' }>
+                  <ArrowButton
+                    key={ item.text }
+                    text={ item.text }
+                    visible={ false }
+                    left={ false }
+                    justify={ 'justify-between' }
+                  />
+                </div>
               );
             } )
-            }*/}
+            }
           </div>
 
         </Popover.Panel>
-
+      </Transition>
     </Popover>
   )
 }
