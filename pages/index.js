@@ -9,24 +9,16 @@ import {
 } from './api/Catalog';
 
 import {
-  IconButton
-} from './api/IconButton';
-
-import {
   HoverMenu
 } from './api/HoverMenu';
 
 import {
+  IconButton
+} from './api/IconButton';
+
+import {
   Logo
 } from './api/Logo';
-
-// import {
-//   LogoVector
-// } from './api/LogoVector';
-
-// import {
-//   TitleVector
-// } from './api/TitleVector';
 
 import {
   PillButton
@@ -35,7 +27,6 @@ import {
 import {
   RoundButton
 } from './api/RoundButton';
-
 
 const Page = props => {
 
@@ -49,20 +40,46 @@ const Page = props => {
           href="favicon.png" />
       </Head>
 
-      <div style={
-        {
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '10px',
-          backgroundColor: '#f5f4f1'
-        } }>
+      <div 
+        className={ 'flex flex-col gap-1 bg-white' } >
 
-        <Logo/>
+        <div
+          className={ 'w-screen flex' } >
+          <Logo/>
+          <div
+            className={ 'w-full flex' } >
 
-{/*
-        <LogoVector/>
-        <TitleVector/>
-*/}
+            <HoverMenu
+              text={ 'Adult & College Students'}
+              items={ [
+                {
+                  text: 'Browse Courses',
+                  link: '/'
+                },
+                {
+                  text: 'Course Registration',
+                  link: '/'
+                }
+              ] }/>
+
+            <HoverMenu
+              text={ 'Adult & College Students'}
+              items={ [
+                {
+                  text: 'Browse Courses',
+                  link: '/'
+                },
+                {
+                  text: 'Course Registration',
+                  link: '/'
+                }
+              ] }/>
+
+
+
+          </div>
+        </div>
+
         <RoundButton
           text={ 'cool buttons' } />
         <RoundButton
@@ -95,18 +112,7 @@ const Page = props => {
         <IconButton
           theme={ 'light' }
           icon={ 'ICON_CLOSE' } />
-        <HoverMenu
-          text={ 'Adult & College Students'}
-          items={ [
-            {
-              text: 'Browse Courses',
-              link: '/'
-            },
-            {
-              text: 'Course Registration',
-              link: '/'
-            }
-          ] }/>
+
         <Catalog
           items={ [
             {
