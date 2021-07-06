@@ -51,34 +51,49 @@ const Page = props => {
           className={ 'w-screen flex' } >
           <Logo/>
           <div
-            className={ 'w-full flex gap-10 px-10' } >
+            className={ 'w-full flex px-10' } >
 
-            <NavItem
-              text={ 'Adult & College Students'}
-              items={ [
-                {
-                  text: 'Browse Courses',
-                  link: '/'
-                },
-                {
-                  text: 'Course Registration',
-                  link: '/'
-                }
-              ] }/>
+            <div
+              className={ 'w-full flex gap-10' } >
+              <NavItem
+                text={ 'About'}
+                items={ [
+                  {
+                    text: 'Browse Courses',
+                    link: '/'
+                  },
+                  {
+                    text: 'Course Registration',
+                    link: '/'
+                  }
+                ] }/>
 
-            <NavItem
-              text={ 'Adult & College Students'}
-              items={ [
-                {
-                  text: 'Browse Courses',
-                  link: '/'
-                },
-                {
-                  text: 'Course Registration',
-                  link: '/'
-                }
-              ] }/>
+              <NavItem
+                text={ 'Leadership'}
+                items={ [
+                  {
+                    text: 'Browse Courses',
+                    link: '/'
+                  },
+                  {
+                    text: 'Course Registration',
+                    link: '/'
+                  }
+                ] }/>
 
+              <NavItem
+                text={ 'Our Programs'}
+                items={ [
+                  {
+                    text: 'Browse Courses',
+                    link: '/'
+                  },
+                  {
+                    text: 'Course Registration',
+                    link: '/'
+                  }
+                ] }/>
+            </div>
           </div>
         </div>
 

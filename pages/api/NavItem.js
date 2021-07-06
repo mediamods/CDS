@@ -72,12 +72,13 @@ export const NavItem = props => {
                   key={ item.text }>
                   {({ active }) => (
                     <div className={ 'py-1' }>
-                    <ArrowButton
-                      text={ item.text }
-                      visible={ false }
-                      left={ false }
-                      justify={ 'justify-between' }
-                    />
+                      <ArrowButton
+                        text={ item.text }
+                        visible={ false }
+                        left={ false }
+                        justify={ 'justify-between' }
+                        active={ active }
+                      />
                     </div>
                   )}
                 </Menu.Item>

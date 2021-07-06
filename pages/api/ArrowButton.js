@@ -1,18 +1,19 @@
-
-
 import clsx from 'clsx';
 
 import { 
   ArrowSmRightIcon
 } from '@heroicons/react/outline';
 
+
+//todo: implement active from props??
+
 export const ArrowButton = props => {
 
   const pText = props.text;
   const pLeft = props.left;
   const pJustify = props.justify;
-
   const pVisible = props.visible;
+  const pActive = props.active;
 
   return (
     <a
