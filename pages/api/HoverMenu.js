@@ -22,7 +22,9 @@ export const HoverMenu = props => {
   const pItems = props.items;
 
   return (
-    <Menu as="div" className="w-56">
+    <Menu
+      as="div"
+      className="" >
 
       <Fragment>
 

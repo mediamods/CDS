@@ -47,7 +47,7 @@ const Page = props => {
           className={ 'w-screen flex' } >
           <Logo/>
           <div
-            className={ 'w-full flex' } >
+            className={ 'w-full flex gap-10 px-10' } >
 
             <HoverMenu
               text={ 'Adult & College Students'}
