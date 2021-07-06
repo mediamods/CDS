@@ -1,5 +1,5 @@
 import { 
-  Menu,
+  Popover,
   Transition
 } from '@headlessui/react';
 
@@ -22,17 +22,15 @@ export const NavItem = props => {
   const pItems = props.items;
 
   return (
-    <Menu
+    <Popover
       as="div"
-      className="" >
+      className="relative" >
 
-      <Fragment>
-
-      <Menu.Button>
+      <Popover.Button>
         { pText }
-      </Menu.Button>
+      </Popover.Button>
 
-      <Transition
+{/*      <Transition
         as={ Fragment }
         enter="transition ease-out duration-100"
         enterFrom="transform opacity-0"
@@ -41,31 +39,34 @@ export const NavItem = props => {
         leaveFrom="transform opacity-100"
         leaveTo="transform opacity-0"
       >
+*/}
+        <Popover.Panel
+          className={ clsx(
+            'bg-white',
+            'w-56',
+            'absolute',
+            'transform',
+            '-translate-x-1/2',
+            'left-1/2' ) } >
 
-        <Menu.Items
-          className="absolute bg-white w-56">
           <div className={ clsx(
-              'transform',
-              'translate-x-1/2'
-            ) } >
-              <div className={ clsx(
-                'absolute',
-                'transform',
-                '-translate-x-1/2',
-                '-translate-y-1/2',
-                'w-2',
-                'h-2',
-                'rounded-full',
-                'bg-crimson'
-              ) }/>
-            </div>
+            'absolute',
+            'transform',
+            '-translate-x-1/2',
+            '-translate-y-1/2',
+            'left-1/2',
+            'w-2',
+            'h-2',
+            'rounded-full',
+            'bg-crimson'
+          ) }/>
 
           <div className={
             clsx(
               'p-6'
             ) } >
 
-            {
+{/*            {
             pItems.map( item => {
               return (
                 <Menu.Item
@@ -84,15 +85,12 @@ export const NavItem = props => {
                 </Menu.Item>
               );
             } )
-            }
-
+            }*/}
           </div>
-        </Menu.Items>
 
-      </Transition>
+        </Popover.Panel>
 
-      </Fragment>
-    </Menu>
+    </Popover>
   )
 }
 
