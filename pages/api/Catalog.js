@@ -10,31 +10,24 @@ export const Catalog = props => {
 
   const pItems = props.items;
 
+
   return (
     pItems.map( item => {
       return (
         <Disclosure
-          key={ item.heading }
+          key={ item.title }
         >
           <Disclosure.Button
             className={
               'flex'
             }
           >
-            { item.heading }
+            { item.title }
           </Disclosure.Button>
           <Disclosure.Panel>
-            <ul>
-{/*            {
-              item.items.map( listItem => {
-                return (
-                  <li>
-                    { listItem.text }
-                  </li>
-                )
-              })
-            }*/}
-            </ul>
+            {
+              item.children
+            }
           </Disclosure.Panel>
         </Disclosure>
       );

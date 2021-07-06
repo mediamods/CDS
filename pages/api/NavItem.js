@@ -68,9 +68,10 @@ export const NavItem = props => {
            {
             pItems.map( item => {
               return (
-                <div className={ 'py-1' }>
+                <div
+                  key={ item.text }
+                  className={ 'py-1' }>
                   <ArrowButton
-                    key={ item.text }
                     text={ item.text }
                     visible={ false }
                     left={ false }

@@ -184,35 +184,27 @@ const Page = props => {
 
         </div>
 
-{/*        <Catalog
+        <Catalog
           items={ [
             {
-              heading: 'Arts, Writing, and the Humanities',
-              items: [
-                {
-                  text: 'Comparitive Literature',
-                  link: '/'
-                },
-                {
-                  text: 'Creative Writing',
-                  link: '/'
-                }
-              ]
+              title: 'Arts, Writing, and the Humanities',
+              children: (
+                <Fragment>
+                <div>ok1</div>
+                <div>ok2</div>
+                </Fragment>
+              )
             },
             {
-              heading: 'Business & Economics',
-              items: [
-                {
-                  text: 'Management',
-                  link: '/'
-                },
-                {
-                  text: 'Economics',
-                  link: '/'
-                }
-              ]
+              title: 'Business & Economics',
+              children: (
+                <Fragment>
+                <div>ok1</div>
+                <div>ok2</div>
+                </Fragment>
+              )
             }
-          ] }/>*/}
+          ] }/>
       </div>
 
     </Fragment>
