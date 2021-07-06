@@ -94,6 +94,11 @@ const Page = props => {
                   }
                 ] }/>
             </div>
+
+            <IconButton
+              theme={ 'light' }
+              icon={ 'ICON_MENU' } />
+
           </div>
         </div>
 
@@ -120,9 +125,7 @@ const Page = props => {
           visible={ true }
           left={ false }
           justify={ 'justify-end' } />
-        <IconButton
-          theme={ 'dark' }
-          icon={ 'ICON_MENU' } />
+
         <IconButton
           theme={ 'light' }
           icon={ 'ICON_SEARCH' } />
