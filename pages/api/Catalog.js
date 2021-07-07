@@ -3,34 +3,32 @@ import {
 } from 'react';
 
 import {
-  Disclosure,
-  Switch
+  Disclosure
 } from '@headlessui/react'
+
+import {
+  useIcon
+} from './IconHooks.js';
+
 
 export const Catalog = props => {
 
   const pItems = props.items;
 
-
   return (
     pItems.map( item => {
+      const iTitle = item.title;
       return (
         <Disclosure
-          key={ item.title }
+          key={ iTitle }
         >
           {({ open }) => (
           <Fragment>
 
-            <Disclosure.Button
-              className={
-                'flex'
-              }
-              >
-              
-
-              { open ? 'open' : item.title }
-
-            </Disclosure.Button>
+            <DisclosureToggle
+              open={ open }
+              title={ iTitle }
+            />
             <Disclosure.Panel>
               {
                 item.children
@@ -46,7 +44,21 @@ export const Catalog = props => {
 };
 
 const DisclosureToggle = props => {
+
+  const pOpen = props.open;
+  const pTitle = props.title;
+
+  const icon = useIcon( false, 'ICON_PLUS' );
+
   return (
-    <div>ok</div>
+    <Disclosure.Button
+      className={
+        'flex'
+      } >
+      
+      { icon }
+      { pOpen ? 'open' : pTitle }
+
+    </Disclosure.Button>
   );
 }

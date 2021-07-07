@@ -21,16 +21,7 @@ export const ICON_SEARCH = 'ICON_SEARCH';
 export const useIcon = ( darkTheme, pIcon ) => {
 
   const icon = useMemo( () => {
-    const className = clsx( 
-      'h-6',
-      'w-6',
-
-      'transition-text ease-bop duration-300',
-      'stroke-current',
-      darkTheme ? 'text-white' : 'text-black',
-      `group-hover:${ darkTheme ? 'text-black' : 'text-white' }`
-    );
-
+    const className = getIconClassName( darkTheme );
     return getIconJsx( pIcon, className );
   }, [
     pIcon,
@@ -38,6 +29,23 @@ export const useIcon = ( darkTheme, pIcon ) => {
   ] );
 
   return icon;
+};
+
+export const useToggleIcon = ( darkTheme, pIconUnselected, pIconSelected ) => {
+
+};
+
+const getIconClassName = ( darkTheme ) => {
+  const className = clsx( 
+    'h-6',
+    'w-6',
+
+    'transition-text ease-bop duration-300',
+    'stroke-current',
+    darkTheme ? 'text-white' : 'text-black',
+    `group-hover:${ darkTheme ? 'text-black' : 'text-white' }`
+  );
+  return className;
 };
 
 const getIconJsx = ( pIcon, className ) => {
@@ -54,5 +62,6 @@ const getIconJsx = ( pIcon, className ) => {
     <SearchIcon className={ className } />,
   };
   const icon = icons[pIcon];
+  console.log( 'pIcon', pIcon, '->', icon );
   return icon;  
-}
+};
