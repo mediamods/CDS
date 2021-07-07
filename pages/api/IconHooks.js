@@ -26,7 +26,6 @@ export const useIconButton = ( darkTheme, hoverToggle ) => {
       'h-8',
       'w-8',
 
-      'transition-bg ease-bop duration-300',
       darkTheme ? 'bg-black' : 'bg-white',
 
       'rounded-full',
@@ -40,12 +39,14 @@ export const useIconButton = ( darkTheme, hoverToggle ) => {
   
     if (hoverToggle) {
       classList.push(
+        'transition-bg ease-bop duration-300',
         darkTheme ? 'hover:bg-white' : 'hover:bg-black',
       );
     }
 
     const buttClassName = clsx(
-      classList
+      classList,
+      hoverToggle
     );
 
     return buttClassName;
@@ -77,16 +78,18 @@ export const useToggleIcon = ( darkTheme, pIconUnselected, pIconSelected ) => {
 };
 
 const getIconClassName = ( darkTheme, hoverToggle ) => {
+
   const classList = [
     'h-6',
     'w-6',
 
-    'transition-text ease-bop duration-300',
     'stroke-current',
     darkTheme ? 'text-white' : 'text-black'
   ];
+
   if (hoverToggle) {
     classList.push(
+      'transition-text ease-bop duration-300',
       `group-hover:${ darkTheme ? 'text-black' : 'text-white' }`
     );    
   }
@@ -111,6 +114,5 @@ const getIconJsx = ( pIcon, className ) => {
     <SearchIcon className={ className } />,
   };
   const icon = icons[pIcon];
-  console.log( 'pIcon', pIcon, '->', icon );
   return icon;  
 };

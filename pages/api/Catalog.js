@@ -67,18 +67,26 @@ const DisclosureToggle = props => {
   const pTitle = props.title;
 
   const iconButtonClass = useIconButton( pOpen, !pOpen );
+  const iconSpinClass = clsx(
+    'transition-rotate ease-bop duration-100',
+    'transform',
+    pOpen ? 'rotate-90' : 'rotate-0'
+  );
+  const iconClass = [iconButtonClass, iconSpinClass].join( ' ' );
+
   const icon = useIcon( pOpen, !pOpen, pOpen ? 'ICON_MINUS' : 'ICON_PLUS' );
 
   return (
-    <Disclosure.Button
+    <div
       className={ 'flex gap-2' } >
       
-      <button className={ iconButtonClass }>
+      <Disclosure.Button 
+        className={ iconClass } >
         { icon }
-      </button>
+      </Disclosure.Button>
 
-      { pOpen ? 'open' : pTitle }
+      { pTitle }
 
-    </Disclosure.Button>
+    </div>
   );
 }

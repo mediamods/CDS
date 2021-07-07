@@ -12,7 +12,7 @@ export const IconButton = props => {
   const pTheme = props.theme;
   const darkTheme = pTheme === 'dark';
 
-  const memodButtonClass = useIconButton( darkTheme, true );
+  const memodButtonClass = useIconButton( darkTheme, true, false );
   const memodIcon = useIcon( darkTheme, true, pIcon );
 
   return (
