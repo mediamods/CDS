@@ -16,32 +16,48 @@ import clsx from 'clsx';
 export const Catalog = props => {
 
   const pItems = props.items;
+  const pItemsLen = pItems.length;
 
   return (
-    pItems.map( item => {
-      const iTitle = item.title;
-      return (
-        <Disclosure
-          key={ iTitle }
-        >
-          {({ open }) => (
-          <Fragment>
+    <div
+      className={ 'w-1/2' } >
+      {
+      pItems.map( (item, idx) => {
+        const iTitle = item.title;
+        return (
+          <Disclosure
+            key={ iTitle }
+          >
+            {({ open }) => (
+            <div
+              className={ clsx(
+                'py-3',
+                'border-t',
+                (idx === pItemsLen-1) ? 'border-b' : '',
+                'border-crimson',
+                'w-full'
+              ) } >
 
-            <DisclosureToggle
-              open={ open }
-              title={ iTitle }
-            />
-            <Disclosure.Panel>
-              {
-                item.children
-              }
-            </Disclosure.Panel>
-          </Fragment>
-          )}
+              <DisclosureToggle
+                open={ open }
+                title={ iTitle }
+              />
+              <Disclosure.Panel
+                //todo - tie to the width of the button?
+                className={ 'px-10' }
+              >
+                {
+                  item.children
+                }
+              </Disclosure.Panel>
+            </div>
+            )}
 
-        </Disclosure>
-      );
-    } )
+          </Disclosure>
+        );
+      } )
+      }
+    </div>
   );
 };
 
