@@ -6,13 +6,17 @@ import {
 import clsx from 'clsx';
 
 import { 
-  XIcon,
   MenuIcon,
-  SearchIcon
+  MinusIcon,
+  PlusIcon,
+  SearchIcon,
+  XIcon
 } from '@heroicons/react/outline';
 
 export const ICON_CLOSE = 'ICON_CLOSE';
 export const ICON_MENU = 'ICON_MENU';
+export const ICON_MINUS = 'ICON_MINUS';
+export const ICON_PLUS = 'ICON_PLUS';
 export const ICON_SEARCH = 'ICON_SEARCH';
 
 export const IconButton = props => {
@@ -33,12 +37,17 @@ export const IconButton = props => {
     );
 
     const icons = {
-      [ICON_MENU]:
-      <MenuIcon className={ className } />,
-      [ICON_SEARCH]:
-      <SearchIcon className={ className } />,
       [ICON_CLOSE]:
       <XIcon className={ className } />,
+      [ICON_MENU]:
+      <MenuIcon className={ className } />,
+      [ICON_MINUS]:
+      <MinusIcon className={ className } />,
+      [ICON_PLUS]:
+      <PlusIcon className={ className } />,
+      [ICON_SEARCH]:
+      <SearchIcon className={ className } />,
+
     };
     const icon = icons[pIcon];
     return icon;
@@ -48,7 +57,7 @@ export const IconButton = props => {
   ] );
 
   return (
-    <a className={ clsx(
+    <button className={ clsx(
       'h-8',
       'w-8',
 
@@ -66,6 +75,6 @@ export const IconButton = props => {
       ) }
     >
       { memodIcon }
-    </a>
+    </button>
   );
 }

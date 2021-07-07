@@ -3,7 +3,8 @@ import {
 } from 'react';
 
 import {
-  Disclosure
+  Disclosure,
+  Switch
 } from '@headlessui/react'
 
 export const Catalog = props => {
@@ -17,20 +18,35 @@ export const Catalog = props => {
         <Disclosure
           key={ item.title }
         >
-          <Disclosure.Button
-            className={
-              'flex'
-            }
-          >
-            { item.title }
-          </Disclosure.Button>
-          <Disclosure.Panel>
-            {
-              item.children
-            }
-          </Disclosure.Panel>
+          {({ open }) => (
+          <Fragment>
+
+            <Disclosure.Button
+              className={
+                'flex'
+              }
+              >
+              
+
+              { open ? 'open' : item.title }
+
+            </Disclosure.Button>
+            <Disclosure.Panel>
+              {
+                item.children
+              }
+            </Disclosure.Panel>
+          </Fragment>
+          )}
+
         </Disclosure>
       );
     } )
   );
 };
+
+const DisclosureToggle = props => {
+  return (
+    <div>ok</div>
+  );
+}
