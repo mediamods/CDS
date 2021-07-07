@@ -7,9 +7,11 @@ import {
 } from '@headlessui/react'
 
 import {
-  useIcon
+  useIcon,
+  useIconButton
 } from './IconHooks.js';
 
+import clsx from 'clsx';
 
 export const Catalog = props => {
 
@@ -48,15 +50,17 @@ const DisclosureToggle = props => {
   const pOpen = props.open;
   const pTitle = props.title;
 
-  const icon = useIcon( false, 'ICON_PLUS' );
+  const iconButtonClass = useIconButton( pOpen );
+  const icon = useIcon( pOpen, pOpen ? 'ICON_MINUS' : 'ICON_PLUS' );
 
   return (
     <Disclosure.Button
-      className={
-        'flex'
-      } >
+      className={ 'flex gap-2' } >
       
-      { icon }
+      <button className={ iconButtonClass }>
+        { icon }
+      </button>
+
       { pOpen ? 'open' : pTitle }
 
     </Disclosure.Button>

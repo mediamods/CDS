@@ -2,7 +2,8 @@
 import clsx from 'clsx';
 
 import {
-  useIcon
+  useIcon,
+  useIconButton
 } from './IconHooks.js';
 
 export const IconButton = props => {
@@ -11,26 +12,11 @@ export const IconButton = props => {
   const pTheme = props.theme;
   const darkTheme = pTheme === 'dark';
 
+  const memodButtonClass = useIconButton( darkTheme );
   const memodIcon = useIcon( darkTheme, pIcon );
 
   return (
-    <button className={ clsx(
-      'h-8',
-      'w-8',
-
-      'transition-bg ease-bop duration-300',
-      darkTheme ? 'bg-black' : 'bg-white',
-      darkTheme ? 'hover:bg-white' : 'hover:bg-black',
-
-      'rounded-full',
-      'flex',
-      'items-center justify-center',
-
-      'cursor-pointer',
-
-      'group'
-      ) }
-    >
+    <button className={ memodButtonClass } >
       { memodIcon }
     </button>
   );

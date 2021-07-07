@@ -18,6 +18,37 @@ export const ICON_MINUS = 'ICON_MINUS';
 export const ICON_PLUS = 'ICON_PLUS';
 export const ICON_SEARCH = 'ICON_SEARCH';
 
+export const useIconButton = ( darkTheme ) => {
+
+  const iconButtonClassName = useMemo( () => {
+
+    const buttClassName = clsx(
+      'h-8',
+      'w-8',
+
+      'transition-bg ease-bop duration-300',
+      darkTheme ? 'bg-black' : 'bg-white',
+      darkTheme ? 'hover:bg-white' : 'hover:bg-black',
+
+      'rounded-full',
+      'flex',
+      'items-center justify-center',
+
+      'cursor-pointer',
+
+      'group'
+    );
+
+    return buttClassName;
+
+  }, [
+    darkTheme
+  ] );
+
+  return iconButtonClassName;
+
+}
+
 export const useIcon = ( darkTheme, pIcon ) => {
 
   const icon = useMemo( () => {
