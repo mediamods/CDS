@@ -18,17 +18,16 @@ export const ICON_MINUS = 'ICON_MINUS';
 export const ICON_PLUS = 'ICON_PLUS';
 export const ICON_SEARCH = 'ICON_SEARCH';
 
-export const useIconButton = ( darkTheme ) => {
+export const useIconButton = ( darkTheme, hoverToggle ) => {
 
   const iconButtonClassName = useMemo( () => {
 
-    const buttClassName = clsx(
+    const classList = [
       'h-8',
       'w-8',
 
       'transition-bg ease-bop duration-300',
       darkTheme ? 'bg-black' : 'bg-white',
-      darkTheme ? 'hover:bg-white' : 'hover:bg-black',
 
       'rounded-full',
       'flex',
@@ -37,6 +36,16 @@ export const useIconButton = ( darkTheme ) => {
       'cursor-pointer',
 
       'group'
+    ];
+  
+    if (hoverToggle) {
+      classList.push(
+        darkTheme ? 'hover:bg-white' : 'hover:bg-black',
+      );
+    }
+
+    const buttClassName = clsx(
+      classList
     );
 
     return buttClassName;
@@ -49,14 +58,15 @@ export const useIconButton = ( darkTheme ) => {
 
 }
 
-export const useIcon = ( darkTheme, pIcon ) => {
+export const useIcon = ( darkTheme, hoverToggle, pIcon ) => {
 
   const icon = useMemo( () => {
-    const className = getIconClassName( darkTheme );
+    const className = getIconClassName( darkTheme, hoverToggle );
     return getIconJsx( pIcon, className );
   }, [
-    pIcon,
-    darkTheme
+    darkTheme,
+    hoverToggle,
+    pIcon
   ] );
 
   return icon;
@@ -66,15 +76,23 @@ export const useToggleIcon = ( darkTheme, pIconUnselected, pIconSelected ) => {
 
 };
 
-const getIconClassName = ( darkTheme ) => {
-  const className = clsx( 
+const getIconClassName = ( darkTheme, hoverToggle ) => {
+  const classList = [
     'h-6',
     'w-6',
 
     'transition-text ease-bop duration-300',
     'stroke-current',
-    darkTheme ? 'text-white' : 'text-black',
-    `group-hover:${ darkTheme ? 'text-black' : 'text-white' }`
+    darkTheme ? 'text-white' : 'text-black'
+  ];
+  if (hoverToggle) {
+    classList.push(
+      `group-hover:${ darkTheme ? 'text-black' : 'text-white' }`
+    );    
+  }
+
+  const className = clsx( 
+    classList
   );
   return className;
 };

@@ -12,8 +12,8 @@ export const IconButton = props => {
   const pTheme = props.theme;
   const darkTheme = pTheme === 'dark';
 
-  const memodButtonClass = useIconButton( darkTheme );
-  const memodIcon = useIcon( darkTheme, pIcon );
+  const memodButtonClass = useIconButton( darkTheme, true );
+  const memodIcon = useIcon( darkTheme, true, pIcon );
 
   return (
     <button className={ memodButtonClass } >

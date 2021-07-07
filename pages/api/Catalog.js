@@ -66,8 +66,8 @@ const DisclosureToggle = props => {
   const pOpen = props.open;
   const pTitle = props.title;
 
-  const iconButtonClass = useIconButton( pOpen );
-  const icon = useIcon( pOpen, pOpen ? 'ICON_MINUS' : 'ICON_PLUS' );
+  const iconButtonClass = useIconButton( pOpen, !pOpen );
+  const icon = useIcon( pOpen, !pOpen, pOpen ? 'ICON_MINUS' : 'ICON_PLUS' );
 
   return (
     <Disclosure.Button
