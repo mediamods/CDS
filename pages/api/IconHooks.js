@@ -30,7 +30,8 @@ export const useIconButton = ( darkTheme, hoverToggle ) => {
 
       'rounded-full',
       'flex',
-      'items-center justify-center',
+      'items-center',
+      'justify-center',
 
       'cursor-pointer',
 

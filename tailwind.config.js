@@ -21,7 +21,12 @@ const ourColors = {
 };
 
 module.exports = {
-  purge: [],
+  purge: {
+    enabled: true,
+    content: [
+      './pages/api/**/*.js'
+    ],
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -53,8 +58,5 @@ module.exports = {
       textColor: ['active'],
       translate: ['group-hover']
     },
-
-
-
   }
 }
