@@ -19,6 +19,7 @@ const ourColors = {
     DEFAULT: `#fff`
   }
 };
+const ourRoundButtonWidth = `0.5rem`;
 
 module.exports = {
   purge: {
@@ -34,7 +35,7 @@ module.exports = {
 
       //shadow-
       boxShadow: {
-        'buttonCrimson': `0 0 0 5pt ${ourColors.crimson.DEFAULT}`,
+        'buttonCrimson': `0 0 0 ${ourRoundButtonWidth} ${ourColors.crimson.DEFAULT}`,
         'noButtonCrimson': `0 0 0 0 ${ourColors.crimson.DEFAULT}`,
       },
 
@@ -46,7 +47,12 @@ module.exports = {
       //https://github.com/tailwindlabs/tailwindcss/discussions/2727
       //w-
       width: {
-        'fit': 'fit-content'
+        'fit': 'fit-content',
+      },
+
+      //p-
+      padding: {
+        'roundButtonXtra': ourRoundButtonWidth
       }
     }
 
