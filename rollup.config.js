@@ -70,6 +70,21 @@ export default [
       file: 'lib/LogoComponent.js',
       format: 'esm'
     } }, defCompExport
-  )
+  ),
 
+  Object.assign( {
+    input: 'pages/api/TextHeading-framer.js',
+    output: {
+      file: 'lib/TextHeading.js',
+      format: 'esm'
+    } }, defCompExport
+  ),
+
+  Object.assign( {
+    input: 'pages/api/TextParagraph-framer.js',
+    output: {
+      file: 'lib/TextParagraph.js',
+      format: 'esm'
+    } }, defCompExport
+  )
 ];
