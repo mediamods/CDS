@@ -2,19 +2,19 @@
 
 export const TextHeading = props => {
 
-  const pMain = props.mainText;
-  const pSub = props.subText;
+  const pHeading = props.heading;
+  const pSubHeading = props.subHeading;
 
   return (
     <div
       className={ 'w-2/3 text-5xl'} >
       <span 
         className={ 'font-bold' }>
-          { pMain }
+          { pHeading }
       </span>
       {'\u00A0'}
       <span>
-        { pSub }
+        { pSubHeading }
       </span>
     </div>
   );
