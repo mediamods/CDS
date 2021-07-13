@@ -77,8 +77,6 @@ const DisclosureToggle = props => {
   const iconClass = [iconButtonClass, iconSpinClass].join( ' ' );
   const icon = useIcon( pOpen, !pOpen, pOpen ? 'ICON_MINUS' : 'ICON_PLUS' );
 
-  console.log( 'iconClass', iconClass );
-
   return (
     <div
       className={ 'flex gap-2' } >

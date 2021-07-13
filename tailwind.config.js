@@ -61,7 +61,7 @@ module.exports = {
   variants: {
     extend: {
       backgroundColor: ['active'],
-      textColor: ['active', 'group-hover'],
+      textColor: ['active'],
       translate: ['group-hover']
     },
   }

@@ -66,7 +66,6 @@ export const useIcon = ( darkTheme, hoverToggle, pIcon ) => {
 
   const icon = useMemo( () => {
     const classNames = getIconClassNames( darkTheme, hoverToggle );
-    console.log( 'classNames', classNames );
     return getIconJsx( pIcon, classNames );
   }, [
     darkTheme,
@@ -95,7 +94,7 @@ const getIconClassNames = ( darkTheme, hoverToggle ) => {
       'transition-text',
       'ease-bop',
       'duration-300',
-      `group-hover:${ darkTheme ? 'text-black' : 'text-white' }`
+      `${ darkTheme ? 'group-hover:text-black' : 'group-hover:text-white' }`
     );    
   }
 
