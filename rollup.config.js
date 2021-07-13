@@ -86,5 +86,13 @@ export default [
       file: 'lib/TextParagraph.js',
       format: 'esm'
     } }, defCompExport
+  ),
+
+  Object.assign( {
+    input: 'pages/api/PillButton-framer.js',
+    output: {
+      file: 'lib/PillButton.js',
+      format: 'esm'
+    } }, defCompExport
   )
 ];
