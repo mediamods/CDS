@@ -59,7 +59,7 @@ export default [
   Object.assign( {
     input: 'pages/api/RoundButton-framer.js',
     output: {
-      file: 'lib/RoundButtonComponent.js',
+      file: 'lib/RoundButton.js',
       format: 'esm'
     } }, defCompExport
   ),
@@ -67,7 +67,7 @@ export default [
   Object.assign( {
     input: 'pages/api/Logo-framer.js',
     output: {
-      file: 'lib/LogoComponent.js',
+      file: 'lib/Logo.js',
       format: 'esm'
     } }, defCompExport
   ),
