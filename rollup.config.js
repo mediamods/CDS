@@ -55,11 +55,19 @@ const defCompExport = {
 };
 
 export default [
-  
+
   Object.assign( {
-    input: 'pages/api/RoundButton-framer.js',
+    input: 'pages/api/Catalog-framer.js',
     output: {
-      file: 'lib/RoundButton.js',
+      file: 'lib/Catalog.js',
+      format: 'esm'
+    } }, defCompExport
+  ),
+
+  Object.assign( {
+    input: 'pages/api/InfoCard-framer.js',
+    output: {
+      file: 'lib/InfoCard.js',
       format: 'esm'
     } }, defCompExport
   ),
@@ -68,6 +76,22 @@ export default [
     input: 'pages/api/Logo-framer.js',
     output: {
       file: 'lib/Logo.js',
+      format: 'esm'
+    } }, defCompExport
+  ),
+  
+  Object.assign( {
+    input: 'pages/api/PillButton-framer.js',
+    output: {
+      file: 'lib/PillButton.js',
+      format: 'esm'
+    } }, defCompExport
+  ),
+
+  Object.assign( {
+    input: 'pages/api/RoundButton-framer.js',
+    output: {
+      file: 'lib/RoundButton.js',
       format: 'esm'
     } }, defCompExport
   ),
@@ -88,19 +112,4 @@ export default [
     } }, defCompExport
   ),
 
-  Object.assign( {
-    input: 'pages/api/PillButton-framer.js',
-    output: {
-      file: 'lib/PillButton.js',
-      format: 'esm'
-    } }, defCompExport
-  ),
-
-  Object.assign( {
-    input: 'pages/api/InfoCard-framer.js',
-    output: {
-      file: 'lib/InfoCard.js',
-      format: 'esm'
-    } }, defCompExport
-  )
 ];
