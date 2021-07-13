@@ -94,5 +94,13 @@ export default [
       file: 'lib/PillButton.js',
       format: 'esm'
     } }, defCompExport
+  ),
+
+  Object.assign( {
+    input: 'pages/api/InfoCard-framer.js',
+    output: {
+      file: 'lib/InfoCard.js',
+      format: 'esm'
+    } }, defCompExport
   )
 ];
