@@ -23,6 +23,8 @@ export const useIconButton = ( darkTheme, hoverToggle ) => {
   const iconButtonClassName = useMemo( () => {
 
     const classList = [
+      'group',
+      
       'h-8',
       'w-8',
 
@@ -33,14 +35,14 @@ export const useIconButton = ( darkTheme, hoverToggle ) => {
       'items-center',
       'justify-center',
 
-      'cursor-pointer',
-
-      'group'
+      'cursor-pointer'
     ];
   
     if (hoverToggle) {
       classList.push(
-        'transition-bg ease-bop duration-300',
+        'transition-bg',
+        'ease-bop',
+        'duration-300',
         darkTheme ? 'hover:bg-white' : 'hover:bg-black',
       );
     }
@@ -63,8 +65,9 @@ export const useIconButton = ( darkTheme, hoverToggle ) => {
 export const useIcon = ( darkTheme, hoverToggle, pIcon ) => {
 
   const icon = useMemo( () => {
-    const className = getIconClassName( darkTheme, hoverToggle );
-    return getIconJsx( pIcon, className );
+    const classNames = getIconClassNames( darkTheme, hoverToggle );
+    console.log( 'classNames', classNames );
+    return getIconJsx( pIcon, classNames );
   }, [
     darkTheme,
     hoverToggle,
@@ -78,27 +81,28 @@ export const useToggleIcon = ( darkTheme, pIconUnselected, pIconSelected ) => {
 
 };
 
-const getIconClassName = ( darkTheme, hoverToggle ) => {
+const getIconClassNames = ( darkTheme, hoverToggle ) => {
 
   const classList = [
     'h-6',
     'w-6',
-
     'stroke-current',
     darkTheme ? 'text-white' : 'text-black'
   ];
 
   if (hoverToggle) {
     classList.push(
-      'transition-text ease-bop duration-300',
+      'transition-text',
+      'ease-bop',
+      'duration-300',
       `group-hover:${ darkTheme ? 'text-black' : 'text-white' }`
     );    
   }
 
-  const className = clsx( 
+  const classNames = clsx( 
     classList
   );
-  return className;
+  return classNames;
 };
 
 const getIconJsx = ( pIcon, className ) => {

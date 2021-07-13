@@ -188,21 +188,13 @@ const Page = props => {
           items={ [
             {
               title: 'Arts, Writing, and the Humanities',
-              children: (
-                <Fragment>
-                <div>ok1</div>
-                <div>ok2</div>
-                </Fragment>
-              )
+              child:
+                (<div>ok1</div>)
             },
             {
               title: 'Business & Economics',
-              children: (
-                <Fragment>
-                <div>ok1</div>
-                <div>ok2</div>
-                </Fragment>
-              )
+              child:
+                (<div>ok1</div>)
             }
           ] }/>
       </div>

@@ -47,7 +47,7 @@ export const Catalog = props => {
                 className={ 'px-10' }
               >
                 {
-                  item.children
+                  item.child
                 }
               </Disclosure.Panel>
             </div>
@@ -68,13 +68,16 @@ const DisclosureToggle = props => {
 
   const iconButtonClass = useIconButton( pOpen, !pOpen );
   const iconSpinClass = clsx(
-    'transition-rotate ease-bop duration-100',
+    'transition-rotate',
+    'ease-bop',
+    'duration-100',
     'transform',
     pOpen ? 'rotate-90' : 'rotate-0'
   );
   const iconClass = [iconButtonClass, iconSpinClass].join( ' ' );
-
   const icon = useIcon( pOpen, !pOpen, pOpen ? 'ICON_MINUS' : 'ICON_PLUS' );
+
+  console.log( 'iconClass', iconClass );
 
   return (
     <div
