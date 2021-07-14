@@ -68,7 +68,7 @@ const Page = props => {
         className={ 'flex flex-col gap-5' } >
 
         <Menu
-          logo={ 'lala' }
+          logo={ 'EXTENSION' }
           menus={ [
             { menuText: 'About',
               menuItems: [
