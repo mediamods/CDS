@@ -25,7 +25,7 @@ export const NavItem = props => {
     <Popover
       as="div"
       className="relative" >
-{/*
+
       <Popover.Button>
         { pText }
       </Popover.Button>
@@ -85,7 +85,8 @@ export const NavItem = props => {
           </div>
 
         </Popover.Panel>
-      </Transition>*/}
+      </Transition>
+
     </Popover>
   )
 }
