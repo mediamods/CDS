@@ -19,7 +19,7 @@ import {
 export const NavItem = props => {
 
   const pText = props.text;
-  const pItems = props.items;
+  const pItems = props.items || [];
 
   return (
     <Popover
