@@ -3,6 +3,7 @@ import babel from '@rollup/plugin-babel';
 import {terser} from 'rollup-plugin-terser';
 // import pkg from './package.json';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
+import replace from '@rollup/plugin-replace';
 
 // import svgr from '@svgr/rollup';
 import url from '@rollup/plugin-url';
@@ -12,7 +13,9 @@ import tailwindcss from 'tailwindcss';
 
 const defCompExport = {
   plugins: [
-
+    replace({
+      'process.env.NODE_ENV': JSON.stringify( 'production' )
+    }),
     //this seems to work for our purposes...
     nodeResolve({
       extensions: [".jsx"]
@@ -49,6 +52,8 @@ const defCompExport = {
     terser()
   ],
   external: [
+    'clsx',
+    '@headlessui',
     'react',
     'react-dom'
   ]

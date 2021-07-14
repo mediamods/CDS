@@ -31,7 +31,6 @@ export const Menu = props => {
 
          	{
 			      pMenus.map( (item, idx) => {
-			      	console.log( 'mt', item.menuText, item.menuItems )
          			return (
 	         			<NavItem
 	         				key={ item.menuText }
@@ -49,6 +48,7 @@ export const Menu = props => {
           icon={ 'ICON_MENU' } />
 
       </div>
+
     </div>
   );
 };

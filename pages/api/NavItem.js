@@ -25,7 +25,7 @@ export const NavItem = props => {
     <Popover
       as="div"
       className="relative" >
-
+{/*
       <Popover.Button>
         { pText }
       </Popover.Button>
@@ -48,7 +48,8 @@ export const NavItem = props => {
             '-translate-x-1/2',
             'left-1/2' ) } >
 
-          <div className={ clsx(
+          <div
+            className={ clsx(
             'absolute',
             'transform',
             '-translate-x-1/2',
@@ -60,8 +61,8 @@ export const NavItem = props => {
             'bg-crimson'
           ) }/>
 
-          <div className={
-            clsx(
+          <div
+            className={ clsx(
               'p-6'
             ) } >
 
@@ -84,7 +85,7 @@ export const NavItem = props => {
           </div>
 
         </Popover.Panel>
-      </Transition>
+      </Transition>*/}
     </Popover>
   )
 }
