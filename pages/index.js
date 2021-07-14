@@ -67,7 +67,47 @@ const Page = props => {
       <div 
         className={ 'flex flex-col gap-5' } >
 
-        <Menu/>
+        <Menu
+          logo={ 'lala' }
+          menus={ [
+            { menuText: 'About',
+              menuItems: [
+                {
+                  text: 'Browse Courses',
+                  link: '/'
+                },
+                {
+                  text: 'Course Registration',
+                  link: '/'
+                }
+              ]
+            },
+            { menuText: 'Leadership',
+              menuItems: [
+                {
+                  text: 'Browse Courses',
+                  link: '/'
+                },
+                {
+                  text: 'Course Registration',
+                  link: '/'
+                }
+              ]
+            },
+            { menuText: 'Our Courses',
+              menuItems: [
+                {
+                  text: 'Browse Courses',
+                  link: '/'
+                },
+                {
+                  text: 'Course Registration',
+                  link: '/'
+                }
+              ]
+            }
+          ] }
+        />
 
         <TextHeading
           heading={ 'Passion for teaching. Dedication to Growth.' }

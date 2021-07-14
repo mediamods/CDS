@@ -14,54 +14,34 @@ import clsx from 'clsx';
 
 export const Menu = props => {
 
+	const pLogo = props.logo;
+	const pMenus = props.menus;
+
   return (
     <div
       className={ 'w-full flex' } >
-      <Logo/>
+      <Logo
+      	logo={ pLogo } />
 
       <div
         className={ 'w-full flex px-10' } >
 
         <div
           className={ 'w-full flex gap-10' } >
-          <NavItem
-            text={ 'About'}
-            items={ [
-              {
-                text: 'Browse Courses',
-                link: '/'
-              },
-              {
-                text: 'Course Registration',
-                link: '/'
-              }
-            ] }/>
 
-          <NavItem
-            text={ 'Leadership'}
-            items={ [
-              {
-                text: 'Browse Courses',
-                link: '/'
-              },
-              {
-                text: 'Course Registration',
-                link: '/'
-              }
-            ] }/>
+         	{
+			      pMenus.map( (item, idx) => {
+			      	console.log( 'mt', item.menuText, item.menuItems )
+         			return (
+	         			<NavItem
+	         				key={ item.menuText }
+	         				text={ item.menuText }
+	         				items={ item.menuItems } />
+         			);
+         		} )
 
-          <NavItem
-            text={ 'Our Programs'}
-            items={ [
-              {
-                text: 'Browse Courses',
-                link: '/'
-              },
-              {
-                text: 'Course Registration',
-                link: '/'
-              }
-            ] }/>
+          }
+
         </div>
 
         <IconButton

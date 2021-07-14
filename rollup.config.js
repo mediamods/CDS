@@ -1,7 +1,7 @@
 import autoprefixer from 'autoprefixer';
 import babel from '@rollup/plugin-babel';
 import {terser} from 'rollup-plugin-terser';
-import pkg from './package.json';
+// import pkg from './package.json';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 
 // import svgr from '@svgr/rollup';
@@ -84,6 +84,14 @@ export default [
     input: 'pages/api/Logo-framer.js',
     output: {
       file: 'lib/Logo.js',
+      format: 'esm'
+    } }, defCompExport
+  ),
+  
+  Object.assign( {
+    input: 'pages/api/Menu-framer.js',
+    output: {
+      file: 'lib/Menu.js',
       format: 'esm'
     } }, defCompExport
   ),
