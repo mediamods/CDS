@@ -29,6 +29,10 @@ import {
 } from './api/Logo';
 
 import {
+  Menu
+} from './api/Menu';
+
+import {
   NavItem
 } from './api/NavItem';
 
@@ -63,60 +67,7 @@ const Page = props => {
       <div 
         className={ 'flex flex-col gap-5' } >
 
-        <div
-          className={ 'w-full flex' } >
-          <Logo/>
-          <div
-            className={ 'w-full flex px-10' } >
-
-            <div
-              className={ 'w-full flex gap-10' } >
-              <NavItem
-                text={ 'About'}
-                items={ [
-                  {
-                    text: 'Browse Courses',
-                    link: '/'
-                  },
-                  {
-                    text: 'Course Registration',
-                    link: '/'
-                  }
-                ] }/>
-
-              <NavItem
-                text={ 'Leadership'}
-                items={ [
-                  {
-                    text: 'Browse Courses',
-                    link: '/'
-                  },
-                  {
-                    text: 'Course Registration',
-                    link: '/'
-                  }
-                ] }/>
-
-              <NavItem
-                text={ 'Our Programs'}
-                items={ [
-                  {
-                    text: 'Browse Courses',
-                    link: '/'
-                  },
-                  {
-                    text: 'Course Registration',
-                    link: '/'
-                  }
-                ] }/>
-            </div>
-
-            <IconButton
-              theme={ 'light' }
-              icon={ 'ICON_MENU' } />
-
-          </div>
-        </div>
+        <Menu/>
 
         <TextHeading
           heading={ 'Passion for teaching. Dedication to Growth.' }
