@@ -16,7 +16,8 @@ export const IconButton = props => {
   const memodIcon = useIcon( darkTheme, true, pIcon );
 
   return (
-    <button className={ memodButtonClass } >
+    <button
+      className={ memodButtonClass } >
       { memodIcon }
     </button>
   );

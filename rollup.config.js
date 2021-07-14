@@ -65,6 +65,14 @@ export default [
   ),
 
   Object.assign( {
+    input: 'pages/api/IconButton-framer.js',
+    output: {
+      file: 'lib/IconButton.js',
+      format: 'esm'
+    } }, defCompExport
+  ),
+
+  Object.assign( {
     input: 'pages/api/InfoCard-framer.js',
     output: {
       file: 'lib/InfoCard.js',
