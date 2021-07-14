@@ -31,6 +31,8 @@ export const Menu = props => {
 
          	{
 			      pMenus.map( (item, idx) => {
+         				console.log( 'item', item, 'menuText', item.menuText, 'menuItems', item.menuItems )
+
          			return (
 	         			<NavItem
 	         				key={ item.menuText }
