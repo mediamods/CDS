@@ -1,57 +1,93 @@
-import {
-  NavItem
-} from './NavItem';
+import { 
+  Popover,
+  Transition
+} from '@headlessui/react';
 
 import {
-  IconButton
-} from './IconButton';
-
-import {
-  Logo
-} from './Logo';
+  Fragment,
+  useEffect,
+  useRef,
+  useState
+} from 'react';
 
 import clsx from 'clsx';
 
+import {
+  ArrowButton
+} from './ArrowButton';
+
 export const Menu = props => {
 
-	const pLogo = props.logo;
-	const pMenus = props.menus;
+  const pText = props.text;
+  const pItems = props.items || [];
 
   return (
-    <div
-      className={ 'w-full flex' } >
-      <Logo
-      	logo={ pLogo } />
+    <Popover
+      as="div"
+      className="relative" >
 
-      <div
-        className={ 'w-full flex px-10' } >
+      <Popover.Button>
+        { pText }
+      </Popover.Button>
 
-        <div
-          className={ 'w-full flex gap-10' } >
+      <Transition
+        enter="transition ease-out duration-100"
+        enterFrom="transform opacity-0"
+        enterTo="transform opacity-100"
+        leave="transition ease-in duration-75"
+        leaveFrom="transform opacity-100"
+        leaveTo="transform opacity-0"
+      >
 
-         	{
-			      pMenus.map( (item, idx) => {
-         				console.log( 'item', item, 'menuText', item.menuText, 'menuItems', item.menuItems )
+        <Popover.Panel
+          className={ clsx(
+            'bg-white',
+            'w-56',
+            'absolute',
+            'transform',
+            '-translate-x-1/2',
+            'left-1/2' ) } >
 
-         			return (
-	         			<NavItem
-	         				key={ item.menuText }
-	         				text={ item.menuText }
-	         				items={ item.menuItems } />
-         			);
-         		} )
+          <div
+            className={ clsx(
+            'absolute',
+            'transform',
+            '-translate-x-1/2',
+            '-translate-y-1/2',
+            'left-1/2',
+            'w-2',
+            'h-2',
+            'rounded-full',
+            'bg-crimson'
+          ) }/>
 
-          }
+          <div
+            className={ clsx(
+              'p-6'
+            ) } >
 
-        </div>
+           {
+            pItems.map( item => {
+              return (
+                <div
+                  key={ item.text }
+                  className={ 'py-1' }>
+                  <ArrowButton
+                    text={ item.text }
+                    visible={ false }
+                    left={ false }
+                    justify={ 'justify-between' }
+                  />
+                </div>
+              );
+            } )
+            }
+          </div>
 
-        <IconButton
-          theme={ 'light' }
-          icon={ 'ICON_MENU' } />
+        </Popover.Panel>
+      </Transition>
 
-      </div>
-
-    </div>
-  );
-};
+    </Popover>
+  )
+}
 

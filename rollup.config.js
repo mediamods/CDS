@@ -99,6 +99,14 @@ export default [
     } }, defCompExport
   ),
   
+  Object.assign( {
+    input: 'pages/api/Menubar-framer.js',
+    output: {
+      file: 'lib/Menubar.js',
+      format: 'esm'
+    } }, defCompExport
+  ),
+
   // Object.assign( {
   //   input: 'pages/api/PillButton-framer.js',
   //   output: {

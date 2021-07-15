@@ -33,8 +33,8 @@ import {
 } from './api/Menu';
 
 import {
-  NavItem
-} from './api/NavItem';
+  Menubar
+} from './api/Menubar';
 
 import {
   PillButton
@@ -67,46 +67,18 @@ const Page = props => {
       <div 
         className={ 'flex flex-col gap-5' } >
 
-        <Menu
-          logo={ 'EXTENSION' }
-          menus={ [
-            { menuText: 'About',
-              menuItems: [
-                {
-                  text: 'Browse Courses',
-                  link: '/'
-                },
-                {
-                  text: 'Course Registration',
-                  link: '/'
-                }
-              ]
-            },
-            { menuText: 'Leadership',
-              menuItems: [
-                {
-                  text: 'Browse Courses',
-                  link: '/'
-                },
-                {
-                  text: 'Course Registration',
-                  link: '/'
-                }
-              ]
-            },
-            { menuText: 'Our Courses',
-              menuItems: [
-                {
-                  text: 'Browse Courses',
-                  link: '/'
-                },
-                {
-                  text: 'Course Registration',
-                  link: '/'
-                }
-              ]
-            }
-          ] }
+        <Menubar
+          logo={ <Logo/> }
+          menus={[
+            (<Menu
+                text={'item 1'}
+                items={[
+                  {text: 'yaya'},
+                  {text: 'kaka'}
+                ]} />),
+            (<Menu
+                text={'item 2'} />)
+          ]}
         />
 
         <TextHeading
