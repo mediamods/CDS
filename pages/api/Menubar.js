@@ -10,6 +10,8 @@ export const Menubar = props => {
 	const pLogo = props.logo;
 	const pMenus = props.menus;
 
+  console.log( 'Menubar', pLogo, '...', pMenus );
+
   return (
     <div
       className={ 'w-full flex' } >
