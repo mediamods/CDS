@@ -16,12 +16,10 @@ import clsx from 'clsx';
 export const Catalog = props => {
 
   const pItems = props.items;
-  console.log( 'pItems', pItems );
 
   return (
-    // null
     <div
-      className={ 'w-1/2' } >
+      className={ 'flex flex-col w-1/2' } >
       {
         pItems.map( item => item )
       }
