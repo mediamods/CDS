@@ -41,7 +41,7 @@ export const CatalogItem = props => {
         className={ clsx(
           'py-3',
           'border-t',
-          (idx === pItemsLen-1) ? 'border-b' : '',
+          //(idx === pItemsLen-1) ? 'border-b' : '',
           'border-crimson',
           'w-full'
         ) } >
