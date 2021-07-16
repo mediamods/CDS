@@ -13,6 +13,10 @@ import {
 } from './api/Catalog';
 
 import {
+  CatalogItem
+} from './api/Catalog';
+
+import {
   IconButton
 } from './api/IconButton';
 
@@ -149,16 +153,14 @@ const Page = props => {
 
         <Catalog
           items={ [
-            {
-              title: 'Arts, Writing, and the Humanities',
-              child:
-                (<div>ok1</div>)
-            },
-            {
-              title: 'Business & Economics',
-              child:
-                (<div>ok1</div>)
-            }
+            <CatalogItem
+              title={ 'Arts, Writing, and the Humanities' }
+              component={ <div>ok1</div> }
+            />,
+            <CatalogItem
+              title={ 'Math, Science, and Engineering' }
+              component={ <div>ok2</div> }
+            />,
           ] }/>
       </div>
 

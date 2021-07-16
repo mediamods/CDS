@@ -16,12 +16,14 @@ import clsx from 'clsx';
 export const Catalog = props => {
 
   const pItems = props.items;
+  console.log( 'pItems', pItems );
 
   return (
+    // null
     <div
       className={ 'w-1/2' } >
       {
-        { pItems }
+        pItems.map( item => item )
       }
     </div>
   );
