@@ -33,22 +33,13 @@ const defCompExport = {
       ]
     }),
     postcss({
-      // minimize: true,
+      minimize: true,
       plugins: [
         tailwindcss,
-        //todo .. upgrade when we can one day...
-        //https://github.com/parcel-bundler/parcel/issues/5160 
         autoprefixer,
       ]
     }),
     url(),
-    // svgr({
-    //   //uggggggh
-    //   //https://github.com/gregberge/svgr/issues/307
-    //   svgoConfig: {
-    //     plugins: [{ prefixIds: false }],
-    //   },
-    // }),
     terser()
   ],
   external: [
@@ -59,13 +50,22 @@ const defCompExport = {
 
 export default [
 
-  // Object.assign( {
-  //   input: 'pages/api/Catalog-framer.js',
-  //   output: {
-  //     file: 'lib/Catalog.js',
-  //     format: 'esm'
-  //   } }, defCompExport
-  // ),
+  Object.assign( {
+    input: 'pages/api/Catalog-framer.js',
+    output: {
+      file: 'lib/Catalog.js',
+      format: 'esm'
+    } }, defCompExport
+  ),
+
+  Object.assign( {
+    input: 'pages/api/Catalog-framer.js',
+    output: {
+      file: 'lib/CatalogItem.js',
+      format: 'esm'
+    } }, defCompExport
+  ),
+
 
   // Object.assign( {
   //   input: 'pages/api/IconButton-framer.js',
@@ -91,21 +91,21 @@ export default [
   //   } }, defCompExport
   // ),
   
-  Object.assign( {
-    input: 'pages/api/Menu-framer.js',
-    output: {
-      file: 'lib/Menu.js',
-      format: 'esm'
-    } }, defCompExport
-  ),
+  // Object.assign( {
+  //   input: 'pages/api/Menu-framer.js',
+  //   output: {
+  //     file: 'lib/Menu.js',
+  //     format: 'esm'
+  //   } }, defCompExport
+  // ),
   
-  Object.assign( {
-    input: 'pages/api/Menubar-framer.js',
-    output: {
-      file: 'lib/Menubar.js',
-      format: 'esm'
-    } }, defCompExport
-  ),
+  // Object.assign( {
+  //   input: 'pages/api/Menubar-framer.js',
+  //   output: {
+  //     file: 'lib/Menubar.js',
+  //     format: 'esm'
+  //   } }, defCompExport
+  // ),
 
   // Object.assign( {
   //   input: 'pages/api/PillButton-framer.js',

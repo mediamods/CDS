@@ -22,44 +22,49 @@ export const Catalog = props => {
     <div
       className={ 'w-1/2' } >
       {
-      pItems.map( (item, idx) => {
-        const iTitle = item.title;
-        return (
-          <Disclosure
-            key={ iTitle }
-          >
-            {({ open }) => (
-            <div
-              className={ clsx(
-                'py-3',
-                'border-t',
-                (idx === pItemsLen-1) ? 'border-b' : '',
-                'border-crimson',
-                'w-full'
-              ) } >
-
-              <DisclosureToggle
-                open={ open }
-                title={ iTitle }
-              />
-              <Disclosure.Panel
-                //todo - tie to the width of the button?
-                className={ 'px-10' }
-              >
-                {
-                  item.child
-                }
-              </Disclosure.Panel>
-            </div>
-            )}
-
-          </Disclosure>
-        );
-      } )
+        { catalogItems }
       }
     </div>
   );
 };
+
+export const CatalogItem = props => {
+  const pTitle = props.title;
+  const pComponent = props.component;
+
+  return (
+    <Disclosure
+      key={ pTitle }
+    >
+      {({ open }) => (
+      <div
+        className={ clsx(
+          'py-3',
+          'border-t',
+          (idx === pItemsLen-1) ? 'border-b' : '',
+          'border-crimson',
+          'w-full'
+        ) } >
+
+        <DisclosureToggle
+          open={ open }
+          title={ pTitle }
+        />
+        <Disclosure.Panel
+          //todo - tie to the width of the button?
+          className={ 'px-10' }
+        >
+          {
+            pComponent
+          }
+        </Disclosure.Panel>
+      </div>
+      )}
+
+    </Disclosure>
+  );
+
+}
 
 const DisclosureToggle = props => {
 
