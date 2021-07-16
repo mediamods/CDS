@@ -16,13 +16,12 @@ import clsx from 'clsx';
 export const Catalog = props => {
 
   const pItems = props.items;
-  const pItemsLen = pItems.length;
 
   return (
     <div
       className={ 'w-1/2' } >
       {
-        { catalogItems }
+        { pItems }
       }
     </div>
   );
