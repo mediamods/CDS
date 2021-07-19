@@ -59,7 +59,9 @@ export const CatalogItem = props => {
           className={ 'px-10' }
         >
           {
-            pComponent
+            cloneElement(pComponent, {
+                style: { ...pComponent.props.style, position: "relative" },
+            })
           }
         </Disclosure.Panel>
       </div>
