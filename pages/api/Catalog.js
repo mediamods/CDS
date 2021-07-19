@@ -60,7 +60,7 @@ export const CatalogItem = props => {
         >
           {
             cloneElement(pComponent, {
-                style: { ...pComponent.props.style, position: "relative" },
+                style: { ...pComponent.style, position: "relative" },
             })
           }
         </Disclosure.Panel>
