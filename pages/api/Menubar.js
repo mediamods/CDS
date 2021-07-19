@@ -1,5 +1,10 @@
 
 import {
+  cloneElement,
+  Children
+} from "react"
+
+import {
   IconButton
 } from './IconButton';
 
@@ -9,8 +14,6 @@ export const Menubar = props => {
 
 	const pLogo = props.logo;
 	const pMenus = props.menus;
-
-  console.log( 'Menubar', pLogo, '...', pMenus );
 
   return (
     <div
@@ -22,7 +25,12 @@ export const Menubar = props => {
 
         <div
           className={ 'w-full flex gap-10' } >
-          { pMenus }
+          {
+            Children.map(pMenus, (child) =>
+              cloneElement(child, {
+                  style: { ...child.props.style, position: "relative" },
+              })
+          )}
         </div>
 
         <IconButton
