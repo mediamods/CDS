@@ -1,4 +1,6 @@
 import {
+  Children,
+  cloneElement,
   Fragment
 } from 'react';
 
@@ -20,9 +22,12 @@ export const Catalog = props => {
   return (
     <div
       className={ 'flex flex-col w-1/2' } >
-      {
-        pItems.map( item => item )
-      }
+          {
+            Children.map(pItems, (child) =>
+              cloneElement(child, {
+                  style: { ...child.props.style, position: "relative" },
+              })
+          )}
     </div>
   );
 };
