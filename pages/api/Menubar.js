@@ -18,7 +18,7 @@ export const Menubar = props => {
   return (
     <div
       className={ 'w-full flex' } >
-      { cloneElement( pLogo, {
+      { pLogo && cloneElement( pLogo, {
           style: { ...pLogo.style, position: "relative" },
         } )
       }
