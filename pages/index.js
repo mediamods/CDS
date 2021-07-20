@@ -81,7 +81,11 @@ const Page = props => {
                   {text: 'kaka'}
                 ]} />),
             (<Menu
-                text={'item 2'} />)
+                text={'item 2'}
+                items={[
+                  {text: 'yaya'},
+                  {text: 'kaka'}
+                ]} />),
           ]}
         />
 
