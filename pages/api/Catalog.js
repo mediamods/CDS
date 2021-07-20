@@ -40,6 +40,7 @@ export const CatalogItem = props => {
     <Disclosure
       key={ pTitle }
     >
+
       {({ open }) => (
       <div
         className={ clsx(
@@ -54,16 +55,21 @@ export const CatalogItem = props => {
           open={ open }
           title={ pTitle }
         />
-        <Disclosure.Panel
-          //todo - tie to the width of the button?
-          className={ 'px-10' }
-        >
-          {
-            cloneElement(pComponent, {
-                style: { ...pComponent.style, position: "relative" },
-            })
-          }
-        </Disclosure.Panel>
+
+        {
+        cloneElement((
+          <Disclosure.Panel
+            //todo - tie to the width of the button?
+            className={ 'px-10' }
+
+          >
+            { pComponent }
+          </Disclosure.Panel>
+        ), {
+            style: { ...pComponent.style, position: "relative" },
+        })
+        }
+
       </div>
       )}
 
