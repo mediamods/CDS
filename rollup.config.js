@@ -66,30 +66,29 @@ export default [
     } }, defCompExport
   ),
 
+  Object.assign( {
+    input: 'pages/api/IconButton-framer.js',
+    output: {
+      file: 'lib/IconButton.js',
+      format: 'esm'
+    } }, defCompExport
+  ),
 
-  // Object.assign( {
-  //   input: 'pages/api/IconButton-framer.js',
-  //   output: {
-  //     file: 'lib/IconButton.js',
-  //     format: 'esm'
-  //   } }, defCompExport
-  // ),
+  Object.assign( {
+    input: 'pages/api/InfoCard-framer.js',
+    output: {
+      file: 'lib/InfoCard.js',
+      format: 'esm'
+    } }, defCompExport
+  ),
 
-  // Object.assign( {
-  //   input: 'pages/api/InfoCard-framer.js',
-  //   output: {
-  //     file: 'lib/InfoCard.js',
-  //     format: 'esm'
-  //   } }, defCompExport
-  // ),
-
-  // Object.assign( {
-  //   input: 'pages/api/Logo-framer.js',
-  //   output: {
-  //     file: 'lib/Logo.js',
-  //     format: 'esm'
-  //   } }, defCompExport
-  // ),
+  Object.assign( {
+    input: 'pages/api/Logo-framer.js',
+    output: {
+      file: 'lib/Logo.js',
+      format: 'esm'
+    } }, defCompExport
+  ),
   
   Object.assign( {
     input: 'pages/api/Menu-framer.js',
@@ -107,35 +106,35 @@ export default [
     } }, defCompExport
   ),
 
-  // Object.assign( {
-  //   input: 'pages/api/PillButton-framer.js',
-  //   output: {
-  //     file: 'lib/PillButton.js',
-  //     format: 'esm'
-  //   } }, defCompExport
-  // ),
+  Object.assign( {
+    input: 'pages/api/PillButton-framer.js',
+    output: {
+      file: 'lib/PillButton.js',
+      format: 'esm'
+    } }, defCompExport
+  ),
 
-  // Object.assign( {
-  //   input: 'pages/api/RoundButton-framer.js',
-  //   output: {
-  //     file: 'lib/RoundButton.js',
-  //     format: 'esm'
-  //   } }, defCompExport
-  // ),
+  Object.assign( {
+    input: 'pages/api/RoundButton-framer.js',
+    output: {
+      file: 'lib/RoundButton.js',
+      format: 'esm'
+    } }, defCompExport
+  ),
 
-  // Object.assign( {
-  //   input: 'pages/api/TextHeading-framer.js',
-  //   output: {
-  //     file: 'lib/TextHeading.js',
-  //     format: 'esm'
-  //   } }, defCompExport
-  // ),
+  Object.assign( {
+    input: 'pages/api/TextHeading-framer.js',
+    output: {
+      file: 'lib/TextHeading.js',
+      format: 'esm'
+    } }, defCompExport
+  ),
 
-  // Object.assign( {
-  //   input: 'pages/api/TextParagraph-framer.js',
-  //   output: {
-  //     file: 'lib/TextParagraph.js',
-  //     format: 'esm'
-  //   } }, defCompExport
-  // ),
+  Object.assign( {
+    input: 'pages/api/TextParagraph-framer.js',
+    output: {
+      file: 'lib/TextParagraph.js',
+      format: 'esm'
+    } }, defCompExport
+  ),
 ];

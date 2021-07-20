@@ -15,6 +15,7 @@ export const Menubar = props => {
 
 	const pLogo = props.logo;
 	const pMenus = props.menus;
+  console.log( 'isValidElement(pLogo)', isValidElement(pLogo) );
 
   return (
     <div
