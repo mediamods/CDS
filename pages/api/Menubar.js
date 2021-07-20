@@ -18,7 +18,10 @@ export const Menubar = props => {
   return (
     <div
       className={ 'w-full flex' } >
-      { pLogo }
+      { cloneElement( pLogo, {
+          style: { ...pLogo.style, position: "relative" },
+        } )
+      }
 
       <div
         className={ 'w-full flex px-10' } >
@@ -27,7 +30,7 @@ export const Menubar = props => {
           className={ 'w-full flex gap-10' } >
           {
             Children.map(pMenus, (child) =>
-              cloneElement(child, {
+              cloneElement( child, {
                   style: { ...child.props.style, position: "relative" },
               })
           )}
