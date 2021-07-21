@@ -55,7 +55,6 @@ module.exports = {
         'roundButtonXtra': ourRoundButtonWidth
       }
     }
-
   },
   plugins: [],
   variants: {

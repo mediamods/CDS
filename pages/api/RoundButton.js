@@ -13,7 +13,7 @@ export const RoundButton = props => {
       )}>
       <a
         className={ clsx(
-        'bg-crimson',
+        'bg-beige',
         'text-white', 
         'h-36',
         'w-36',
