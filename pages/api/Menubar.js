@@ -15,14 +15,16 @@ export const Menubar = props => {
 
 	const pLogo = props.logo;
 	const pMenus = props.menus;
-  console.log( 'isValidElement(pLogo)', isValidElement(pLogo), pLogo );
 
   return (
     <div
       className={ 'w-full flex' } >
-      { isValidElement(pLogo) && cloneElement( pLogo, {
-          style: { ...pLogo.style, position: "relative" },
-        } )
+
+      {
+        Children.map(pLogo, (child) =>
+          cloneElement( child, {
+              style: { ...child.props.style, position: "relative" },
+          }) )
       }
 
       <div

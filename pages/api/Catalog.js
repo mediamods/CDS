@@ -20,6 +20,7 @@ export const Catalog = props => {
   const pItems = props.items;
 
   return (
+    cloneElement((
     <div
       className={ 'flex flex-col w-1/2' } >
           {
@@ -28,8 +29,8 @@ export const Catalog = props => {
                   style: { ...child.props.style, position: "relative" },
               })
           )}
-    </div>
-  );
+    </div>),{style: { ...{position: "relative"} }},
+  ))
 };
 
 export const CatalogItem = props => {
@@ -42,6 +43,7 @@ export const CatalogItem = props => {
     >
 
       {({ open }) => (
+      cloneElement((
       <div
         className={ clsx(
           'py-3',
@@ -69,8 +71,10 @@ export const CatalogItem = props => {
             style: { ...pComponent.style, position: "relative" },
         })
         }
-
       </div>
+      ), {
+            style: { ...{position: "relative"} },
+      })
       )}
 
     </Disclosure>

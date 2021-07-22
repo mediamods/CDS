@@ -50,21 +50,21 @@ const defCompExport = {
 
 export default [
 
-  // Object.assign( {
-  //   input: 'pages/api/Catalog-framer.js',
-  //   output: {
-  //     file: 'lib/Catalog.js',
-  //     format: 'esm'
-  //   } }, defCompExport
-  // ),
+  Object.assign( {
+    input: 'pages/api/Catalog-framer.js',
+    output: {
+      file: 'lib/Catalog.js',
+      format: 'esm'
+    } }, defCompExport
+  ),
 
-  // Object.assign( {
-  //   input: 'pages/api/Catalog-framer.js',
-  //   output: {
-  //     file: 'lib/CatalogItem.js',
-  //     format: 'esm'
-  //   } }, defCompExport
-  // ),
+  Object.assign( {
+    input: 'pages/api/Catalog-framer.js',
+    output: {
+      file: 'lib/CatalogItem.js',
+      format: 'esm'
+    } }, defCompExport
+  ),
 
   // Object.assign( {
   //   input: 'pages/api/IconButton-framer.js',
@@ -90,21 +90,21 @@ export default [
   //   } }, defCompExport
   // ),
   
-  Object.assign( {
-    input: 'pages/api/Menu-framer.js',
-    output: {
-      file: 'lib/Menu.js',
-      format: 'esm'
-    } }, defCompExport
-  ),
+  // Object.assign( {
+  //   input: 'pages/api/Menu-framer.js',
+  //   output: {
+  //     file: 'lib/Menu.js',
+  //     format: 'esm'
+  //   } }, defCompExport
+  // ),
   
-  Object.assign( {
-    input: 'pages/api/Menubar-framer.js',
-    output: {
-      file: 'lib/Menubar.js',
-      format: 'esm'
-    } }, defCompExport
-  ),
+  // Object.assign( {
+  //   input: 'pages/api/Menubar-framer.js',
+  //   output: {
+  //     file: 'lib/Menubar.js',
+  //     format: 'esm'
+  //   } }, defCompExport
+  // ),
 
   // Object.assign( {
   //   input: 'pages/api/PillButton-framer.js',
@@ -114,13 +114,13 @@ export default [
   //   } }, defCompExport
   // ),
 
-  Object.assign( {
-    input: 'pages/api/RoundButton-framer.js',
-    output: {
-      file: 'lib/RoundButton.js',
-      format: 'esm'
-    } }, defCompExport
-  ),
+  // Object.assign( {
+  //   input: 'pages/api/RoundButton-framer.js',
+  //   output: {
+  //     file: 'lib/RoundButton.js',
+  //     format: 'esm'
+  //   } }, defCompExport
+  // ),
 
   // Object.assign( {
   //   input: 'pages/api/TextHeading-framer.js',
