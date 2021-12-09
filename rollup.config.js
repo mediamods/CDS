@@ -11,14 +11,17 @@ import tailwindcss from 'tailwindcss';
 
 const defCompExport = {
   plugins: [
+    //this [no longer] seems to work for our purposes...
+    nodeResolve(
+      {
+        extensions: [".jsx"]
+      }
+    ),
+
     replace({
       'process.env.NODE_ENV': JSON.stringify( 'production' ),
       preventAssignment: true
     }),
-    //this [no longer] seems to work for our purposes...
-    // nodeResolve({
-    //   extensions: [".jsx"]
-    // }),
     babel({
       "exclude": 'node_modules/**',
       "babelHelpers": "bundled",
